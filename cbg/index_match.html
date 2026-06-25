@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>光遇账号估值 · 藏宝阁2026公式</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js">
+    </script>
+    <script src="https://cbg-sky.res.netease.com/js/game_auto_config.js">
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+        html {
+            font-size: 16px
+        }
+        body {
+            background: #70909f;
+            font-family: 'Segoe UI', 'Noto Sans', system-ui, sans-serif;
+            padding: 0.625em;
+            color: #1f2e35
+        }
+        .container {
+            max-width: 64em;
+            margin: 0 auto;
+            background: #fffcf6;
+            border-radius: 1.5em;
+            box-shadow: 0 0.75em 1.875em rgba(0, 0, 0, .15);
+            padding: 1em 0.75em 1.25em;
+            border: 0.0625em solid #e8dfd3;
+            padding-bottom: 5em
+        }
+        h1 {
+            font-size: 1.8em;
+            font-weight: 500;
+            text-align: center;
+            color: #5e4632;
+            margin-bottom: 0.375em;
+            letter-spacing: 0.125em
+        }
+        .tabs {
+            display: flex;
+            gap: 0;
+            margin-bottom: 1em;
+            flex-wrap: wrap
+        }
+        .tab-btn {
+            flex: 1;
+            min-width: 5em;
+            padding: 0.5em 0.3em;
+            border: none;
+            background: #ede0d0;
+            color: #5e4632;
+            font-weight: 600;
+            font-size: 0.8em;
+            cursor: pointer;
+            transition: .2s;
+            border-radius: 0.75em 0.75em 0 0;
+            border: 0.0625em solid #dacbb8
+        }
+        .tab-btn.active {
+            background: #fdfaf5;
+            border-bottom-color: #fdfaf5;
+            color: #4e3b2c
+        }
+        .tab-content {
+            display: none
+        }
+        .tab-content.active {
+            display: block
+        }
+        .section {
+            margin-bottom: 1em;
+            background: #fdfaf5;
+            border-radius: 1em;
+            padding: 0.75em 0.625em;
+            border: 0.0625em solid #ede3d6
+        }
+        .section-title {
+            font-weight: 600;
+            font-size: 0.9em;
+            margin-bottom: 0.625em;
+            color: #5a4a38
+        }
+        textarea {
+            width: 100%;
+            min-height: 5em;
+            padding: 0.5em 0.75em;
+            border-radius: 0.75em;
+            border: 0.0625em solid #d6c8b6;
+            font-size: 0.85em;
+            font-family: monospace;
+            resize: vertical
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.5em 1.5em;
+            background: #b48b5a;
+            color: white;
+            border: none;
+            border-radius: 0.75em;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9em;
+            text-align: center
+        }
+        .btn:hover {
+            background: #9d7752
+        }
+        .btn-sm {
+            padding: 0.3em 0.8em;
+            font-size: 0.8em
+        }
+        .btn-block {
+            display: block;
+            width: 100%
+        }
+        .card-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5em
+        }
+        .card {
+            background: #fffdf9;
+            border: 0.0625em solid #e3d8c8;
+            border-radius: 0.75em;
+            padding: 0.5em;
+            cursor: pointer;
+            transition: .2s;
+            width: 100%
+        }
+        .card:hover {
+            background: #f6efe5;
+            border-color: #c7b39b
+        }
+        .card .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.25em
+        }
+        .card .card-body {
+            display: none;
+            margin-top: 0.5em;
+            padding-top: 0.5em;
+            border-top: 0.0625em dashed #d9cdbc
+        }
+        .card.expanded .card-body {
+            display: block
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.375em
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0.375em
+        }
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.25em
+        }
+        .stat-item {
+            background: #f6efe5;
+            border-radius: 0.5em;
+            padding: 0.375em;
+            text-align: center
+        }
+        .stat-item .num {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #4e3b2c
+        }
+        .stat-item .lbl {
+            font-size: 0.7em;
+            color: #8b7a68
+        }
+        .item-icon {
+            width: 3em;
+            height: 3em;
+            object-fit: contain;
+            border-radius: 0.375em;
+            background: #70909f;
+            padding: 0.125em
+        }
+        .item-sm {
+            width: 2em;
+            height: 2em;
+            object-fit: contain;
+            border-radius: 0.25em;
+            background: #70909f;
+            padding: 0.0625em
+        }
+        .item-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25em
+        }
+        .item-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25em;
+            background: #f6efe5;
+            border-radius: 0.5em;
+            padding: 0.25em 0.5em;
+            font-size: 0.75em
+        }
+        .tag {
+            display: inline-block;
+            padding: 0.125em 0.5em;
+            border-radius: 0.5em;
+            font-size: 0.7em;
+            font-weight: 600;
+            margin: 0.0625em
+        }
+        .tag-hot {
+            background: #fce4d6;
+            color: #c0392b
+        }
+        .tag-gold {
+            background: #fef9e7;
+            color: #7d6608
+        }
+        .tag-green {
+            background: #d5f5e3;
+            color: #1e8449
+        }
+        .tag-gray {
+            background: #e5e7e9;
+            color: #5d6d7e
+        }
+        .estimate-bar {
+            background: linear-gradient(145deg, #f6efe5, #ede0d0);
+            border-radius: 0.75em;
+            padding: 0.5em 0.75em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.5em;
+            margin-top: 0.5em
+        }
+        .estimate-bar .total {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #c0392b
+        }
+        .estimate-bar .detail {
+            font-size: 0.8em;
+            color: #5f5344
+        }
+        .floating-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(145deg, #f6efe5, #ede0d0);
+            border-top: 0.125em solid #dacbb8;
+            padding: 0.5em 0.75em;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5em;
+            flex-wrap: wrap;
+            box-shadow: 0 -0.25em 0.75em rgba(0, 0, 0, .1);
+            font-size: 0.9em
+        }
+        .status {
+            font-size: 0.85em;
+            padding: 0.5em;
+            border-radius: 0.75em;
+            margin-top: 0.5em
+        }
+        .status-loading {
+            background: #fef9e7;
+            color: #7d6608
+        }
+        .status-ok {
+            background: #d5f5e3;
+            color: #1e8449
+        }
+        .status-err {
+            background: #fce4d6;
+            color: #c0392b
+        }
+        @media(max-width:500px) {
+            .grid-4 {
+                grid-template-columns: repeat(2, 1fr)
+            }
+            .item-icon {
+                width: 2.5em;
+                height: 2.5em
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✨ 光遇账号估值仪</h1>
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="tab-import">📥 导入角色</button>
+            <button class="tab-btn" data-tab="tab-detail">📋 角色详情</button>
+        </div>
+        <div class="tab-content active" id="tab-import">
+            <div class="section">
+                <div class="section-title">📥 粘贴藏宝阁链接（每行一个）</div>
+                <textarea id="batchUrls" placeholder="https://sky.cbg.163.com/cgi/mweb/equip/1/18abc462-5648-481d-ad3c-1afd0e6f2ebd"></textarea>
+                <button class="btn btn-block" id="fetchBtn" style="margin-top:0.5em">🚀 获取角色数据</button>
+                <div id="importStatus"></div>
+            </div>
+            <div class="section" id="cardListSection" style="display:none">
+                <div class="section-title">📊 角色列表（点击展开，点击「查看详情」进入详情页）</div>
+                <div class="card-list" id="cardList"></div>
+            </div>
+        </div>
+        <div class="tab-content" id="tab-detail">
+            <div class="section" id="detailSection">
+                <div class="section-title">📋 请先在「导入角色」页获取数据</div>
+            </div>
+        </div>
+    </div>
+    <div class="floating-bar" id="floatBar" style="display:none">
+        <span style="font-weight:600">💰 总估值</span>
+        <span class="total" id="floatTotal">¥0</span>
+        <span class="detail" id="floatDetail"></span>
+    </div>
+    <script>
+    $(function() {
+        let allCharData = [];
+        let currentChar = null;
+        let CONFIG = null;
+        // 动态映射表
+        let seasonIdToName = {};
+        let itemIdToSeasonId = {};
+
+        function waitForConfig(cb) {
+            if (typeof CBG_GAME_CONFIG !== 'undefined') {
+                CONFIG = CBG_GAME_CONFIG;
+                buildMaps();
+                cb();
+            } else { setTimeout(() => waitForConfig(cb), 100); }
+        }
+
+        function buildMaps() {
+            if (!CONFIG) return;
+            // season_id → season_name
+            if (CONFIG.seasons) {
+                CONFIG.seasons.forEach(s => { seasonIdToName[s.id] = s.name; });
+            }
+            // item_id → season_id（从filters）
+            if (CONFIG.filters) {
+                CONFIG.filters.forEach(f => {
+                    if (f.season) itemIdToSeasonId[f.id] = f.season;
+                });
+            }
+            console.log('✅ 映射表构建完成, seasons:', Object.keys(seasonIdToName).length, ', items:', Object.keys(itemIdToSeasonId).length);
+        }
+
+        function getItemName(id) {
+            if (!CONFIG) return id.replace('CharSkyKid_', '');
+            if (CONFIG.outfit_from_cbg && CONFIG.outfit_from_cbg[id] && CONFIG.outfit_from_cbg[id].names && CONFIG.outfit_from_cbg[id]
+                .names[0]) return CONFIG.outfit_from_cbg[id].names[0];
+            if (CONFIG.filters) { const f = CONFIG.filters.find(x => x.id === id); if (f && f.name_str) return f.name_str; }
+            if (CONFIG.valuable_appearance_from_cbg && CONFIG.valuable_appearance_from_cbg[id] && CONFIG
+                .valuable_appearance_from_cbg[id].name) return CONFIG.valuable_appearance_from_cbg[id].name;
+            if (CONFIG.hot_appearance_from_cbg) { const h = CONFIG.hot_appearance_from_cbg.find(x => x.id === id); if (h && h.name) return h
+                    .name; }
+            return id.replace('CharSkyKid_', '');
+        }
+
+        function getItemImg(id) {
+            if (!CONFIG || !CONFIG.display_content) return '';
+            const fn = CONFIG.display_content[id];
+            return fn ? 'https://cbg-sky.res.netease.com//game_res/' + fn : '';
+        }
+
+        function isIapItem(id) { return CONFIG && CONFIG.iaps && CONFIG.iaps.some(i => i.id === id); }
+
+        function getSeasonName(id) {
+            const sid = itemIdToSeasonId[id];
+            return sid && seasonIdToName[sid] ? seasonIdToName[sid] : null;
+        }
+
+        function getApSortKey(id) { const m = id.match(/AP(\d+)/); return m ? parseInt(m[1]) : 999; }
+
+        function sortBySeason(ids) { return [...ids].sort((a, b) => getApSortKey(a) - getApSortKey(b)); }
+
+        function getItemCategory(id) {
+            if (!CONFIG) return null;
+            if (CONFIG.outfit_config && CONFIG.outfit_config[id]) return CONFIG.outfit_config[id];
+            if (CONFIG.outfits) { const f = CONFIG.outfits.find(o => o.id === id); if (f) return f; }
+            return null;
+        }
+
+        $('.tab-btn').on('click', function() {
+            $('.tab-btn').removeClass('active');
+            $('.tab-content').removeClass('active');
+            $(this).addClass('active');
+            $('#' + $(this).data('tab')).addClass('active');
+        });
+
+        function extractId(url) {
+            url = url.trim();
+            let m = url.match(/equip\/\d+\/([a-f0-9-]+)/);
+            if (m) return m[1];
+            m = url.match(/equipdesc\/([a-f0-9-]+)\.json/);
+            if (m) return m[1];
+            m = url.match(/^([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})/);
+            return m ? m[1] : null;
+        }
+
+        function getJsonUrl(id) { return 'https://cbg-other-desc.res.netease.com/sky/static/equipdesc/' + id + '.json'; }
+
+        function parseEquip(wrapper) {
+            if (!wrapper) return null;
+            try {
+                const equipDesc = typeof wrapper.equip_desc === 'string' ? JSON.parse(wrapper.equip_desc) : wrapper
+                    .equip_desc;
+                let raw = equipDesc.raw_content;
+                if (typeof raw === 'string') {
+                    raw = raw.replace(/\\"/g, '"').replace(/\\n/g, '\n');
+                    if (raw.startsWith('"') && raw.endsWith('"')) raw = raw.slice(1, -1);
+                    raw = JSON.parse(raw);
+                }
+                raw._display = equipDesc.display_content || {};
+                raw._outfitInfo = equipDesc.outfit_from_cbg || {};
+                return raw;
+            } catch (e) { console.error(e); return null; }
+        }
+
+        function calcEstimate(data) {
+            const gradIds = data.season_graduation || [];
+            const sortedGradIds = sortBySeason(gradIds);
+            const matchedSeasons = new Set();
+            gradIds.forEach(id => { const sn = getSeasonName(id); if (sn) matchedSeasons.add(sn); });
+            let seasonTotal = matchedSeasons.size * 20;
+            const iapIds = data.iap || [];
+            let packOriginal = 0,
+                packValue = 0;
+            iapIds.forEach(id => { packOriginal += 68;
+                packValue += 20; });
+            const height = data.equipped_outfit?.height || 0;
+            let heightBonus = 0;
+            if (height >= 1.9) heightBonus = 80;
+            else if (height <= -1.9) heightBonus = 100;
+            else if (Math.abs(height) >= 1.5) heightBonus = 40;
+            const total = seasonTotal + packValue + heightBonus;
+            let quick, hard;
+            if (total <= 500) { quick = Math.round(total * 0.75);
+                hard = total + 50; } else if (total <= 1000) { quick = Math.round(total * 0.7);
+                hard = total; } else if (total <= 2000) { quick = Math.round(total * 0.75);
+                hard = total - 100; } else { quick = Math.round(total * 0.85);
+                hard = Math.round(total * 1.1); }
+            return {
+                candles: data.candles || 0,
+                hearts: data.heart || 0,
+                ascended: data.birth_buff || 0,
+                height,
+                wingless: data.is_wingless || false,
+                seasonCount: matchedSeasons.size,
+                packCount: iapIds.length,
+                packOriginal,
+                packValue,
+                seasonTotal,
+                heightBonus,
+                total,
+                quick,
+                hard,
+                gradIds: sortedGradIds,
+                iapIds,
+                outfit: data.outfit,
+                collectible: data.collectible,
+                seasonNames: [...matchedSeasons]
+            };
+        }
+
+        function renderCardList() {
+            const $list = $('#cardList').empty();
+            allCharData.forEach((char, i) => {
+                const est = char.estimate;
+                const $card = $(`
+                    <div class="card" data-index="${i}">
+                        <div class="card-header">
+                            <span>📦 #${i+1} <span style="font-size:0.8em;color:#8b7a68">${char.id.substring(0,8)}...</span></span>
+                            <span>🕯${est.candles} ❤${est.hearts} 📏${est.height.toFixed(2)}</span>
+                            <span style="font-weight:700;color:#c0392b">¥${est.total}</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="grid-2" style="margin-bottom:0.5em">
+                                <div>毕业季节: ${est.seasonNames.join('、')||'无'}</div>
+                                <div>毕业物品: ${est.gradIds.length}个</div>
+                                <div>礼包物品: ${est.packCount}个</div>
+                                <div>季节价值: ¥${est.seasonTotal}</div>
+                                <div>礼包折价: ¥${est.packValue}</div>
+                                <div>身高加成: ¥${est.heightBonus}</div>
+                                <div>秒出: ¥${est.quick}</div>
+                                <div>难卖: ¥${est.hard}</div>
+                            </div>
+                            <button class="btn btn-sm import-detail-btn" data-index="${i}">📋 查看完整详情</button>
+                        </div>
+                    </div>
+                `);
+                $card.on('click', function(e) { if (!$(e.target).is('button')) $(this).toggleClass('expanded'); });
+                $list.append($card);
+            });
+            $('.import-detail-btn').on('click', function(e) {
+                e.stopPropagation();
+                currentChar = allCharData[$(this).data('index')];
+                renderDetailPage();
+                $('.tab-btn[data-tab="tab-detail"]').click();
+            });
+        }
+
+        function renderItemChips(ids, containerSelector, isGrad) {
+            const $c = $(containerSelector).empty();
+            ids.forEach(id => {
+                const name = getItemName(id);
+                const img = getItemImg(id);
+                const seasonName = getSeasonName(id);
+                const iap = isIapItem(id);
+                let tags = '';
+                if (seasonName) tags += `<span class="tag tag-green">${seasonName}</span>`;
+                if (iap && !isGrad) tags += `<span class="tag tag-gold">礼包</span>`;
+                $c.append(
+                    `<div class="item-chip">${img?`<img src="${img}" class="item-sm" alt="${name}">`:''}<span>${name}</span>${tags}</div>`
+                    );
+            });
+        }
+
+        function renderDetailPage() {
+            if (!currentChar) return;
+            const d = currentChar.data;
+            const est = currentChar.estimate;
+            const $s = $('#detailSection').empty();
+            $s.append(`
+                <div class="section-title">📊 角色基础信息</div>
+                <div class="grid-4">
+                    <div class="stat-item"><div class="num">${est.candles}</div><div class="lbl">蜡烛</div></div>
+                    <div class="stat-item"><div class="num">${est.hearts}</div><div class="lbl">爱心</div></div>
+                    <div class="stat-item"><div class="num">${est.ascended}</div><div class="lbl">升华蜡烛</div></div>
+                    <div class="stat-item"><div class="num">${est.height.toFixed(2)}</div><div class="lbl">身高${est.height>=1.9?'🔥':''}</div></div>
+                    <div class="stat-item"><div class="num">${est.wingless?'无翼':'有翼'}</div><div class="lbl">类型</div></div>
+                    <div class="stat-item"><div class="num">${est.seasonCount}</div><div class="lbl">毕业季节</div></div>
+                    <div class="stat-item"><div class="num">${est.packCount}</div><div class="lbl">礼包物品</div></div>
+                    <div class="stat-item"><div class="num">${d.collectible?.length||0}</div><div class="lbl">动作/叫声</div></div>
+                </div>
+                <div class="estimate-bar">
+                    <span>💰 总估值</span><span class="total">¥${est.total}</span>
+                    <span class="detail">季节¥${est.seasonTotal} + 礼包¥${est.packValue} + 身高¥${est.heightBonus} | 秒出¥${est.quick} 难卖¥${est.hard}</span>
+                </div>
+                <div class="section-title" style="margin-top:1em">🎓 毕业物品 (${est.gradIds.length}个)</div>
+                <div class="item-list" id="gradItems"></div>
+                <div class="section-title" style="margin-top:0.5em">🎁 礼包物品 (${est.iapIds.length}个)</div>
+                <div class="item-list" id="iapItems"></div>
+            `);
+            if (d.outfit) {
+                $s.append(`<div class="section-title" style="margin-top:0.5em">👗 衣柜统计</div><div class="grid-3" id="wardrobeGrid"></div>`);
+                const $wg = $('#wardrobeGrid').empty();
+                let total = 0;
+                d.outfit.forEach(cat => {
+                    if (cat.tag === 'wing') { const c = cat.ids?.length || 0;
+                        total += c;
+                        $wg.append(`<div class="stat-item"><div class="num">${c}</div><div class="lbl">斗篷</div></div>`); } else if (cat
+                        .data) {
+                        cat.data.forEach(sub => { const c = sub.ids?.length || 0;
+                            total += c;
+                            const lm = { body: '裤子', feet: '鞋子', body_onesie: '连体衣', mask: '面具', face: '面饰',
+                                neck: '颈饰', hair: '发型', hat: '头饰', horn: '耳饰/角', prop: '背饰',
+                                large_prop: '大家具', small_prop: '小家具' };
+                            $wg.append(
+                                `<div class="stat-item"><div class="num">${c}</div><div class="lbl">${lm[sub.sub_tag]||sub.sub_tag}</div></div>`
+                                ); });
+                    }
+                });
+                $wg.append(`<div class="stat-item" style="background:#f0e5d8"><div class="num">${total}</div><div class="lbl">总计</div></div>`);
+            }
+            renderItemChips(est.gradIds, '#gradItems', true);
+            renderItemChips(est.iapIds, '#iapItems', false);
+            $('#floatBar').show();
+            $('#floatTotal').text('¥' + est.total);
+            $('#floatDetail').text('季节¥' + est.seasonTotal + ' + 礼包¥' + est.packValue + ' | 秒出¥' + est.quick);
+        }
+
+        $('#fetchBtn').on('click', async function() {
+            const text = $('#batchUrls').val().trim();
+            if (!text) { $('#importStatus').html('<div class="status status-err">请输入链接</div>'); return; }
+            const urls = text.split(/[\n\r]+/).filter(u => u.trim());
+            const $st = $('#importStatus').html(`<div class="status status-loading">正在获取 ${urls.length} 个角色...</div>`);
+            $('#cardListSection').show();
+            allCharData = [];
+            for (let i = 0; i < urls.length; i++) {
+                const id = extractId(urls[i].trim());
+                if (!id) { allCharData.push({ error: '无法提取ID', url: urls[i], id: 'unknown' }); continue; }
+                try {
+                    const r = await fetch(getJsonUrl(id));
+                    if (!r.ok) throw new Error('HTTP ' + r.status);
+                    const d = parseEquip(await r.json());
+                    if (!d) throw new Error('解析失败');
+                    allCharData.push({ id, url: urls[i], data: d, estimate: calcEstimate(d) });
+                } catch (e) { allCharData.push({ error: e.message, id, url: urls[i] }); }
+                $st.html(`<div class="status status-loading">进度: ${i+1}/${urls.length}</div>`);
+            }
+            renderCardList();
+            $st.html(`<div class="status status-ok">✅ 完成！共获取 ${allCharData.length} 个角色</div>`);
+        });
+
+        waitForConfig(() => console.log('✅ CBG_GAME_CONFIG 就绪'));
+    });
+    </script>
+</body>
+</html>

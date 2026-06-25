@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>光·遇 光翼查询</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <style>
+        :root {
+            --bg: #f5f5f7;
+            --card: #ffffff;
+            --text: #2c2c2c;
+            --gold: #c7851a;
+            --green: #2e8b57;
+            --red: #c0392b;
+            --border: #e0e0e0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.06);
+            --section-bg: #fafafa;
+            --progress-bg: #eee;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f1a;
+                --card: #1a1a2e;
+                --text: #e0e0e0;
+                --gold: #e2b04a;
+                --green: #5cb88d;
+                --red: #d95555;
+                --border: #2a2a40;
+                --shadow: 0 2px 8px rgba(0,0,0,0.3);
+                --section-bg: #141428;
+                --progress-bg: #2a2a40;
+            }
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg); color: var(--text);
+            padding: 20px 12px 40px;
+            transition: background 0.3s, color 0.3s;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .container { max-width: 600px; margin: 0 auto; }
+        h1 { text-align: center; font-size: 1.8em; margin-bottom: 6px; color: var(--text); }
+        .subtitle { text-align: center; font-size: 0.9em; color: #999; margin-bottom: 24px; }
+
+        .search-box {
+            display: flex; gap: 10px; margin-bottom: 24px;
+            background: var(--card); padding: 12px; border-radius: 16px;
+            border: 1px solid var(--border); box-shadow: var(--shadow);
+        }
+        .search-box input {
+            flex: 1; padding: 14px 12px; border-radius: 12px;
+            border: 1px solid var(--border); background: var(--bg);
+            color: var(--text); font-size: 1em; outline: none;
+        }
+        .search-box input:focus { border-color: var(--gold); }
+        .search-box button {
+            padding: 14px 20px; border-radius: 12px; border: none;
+            background: var(--gold); color: #111; font-weight: 700;
+            font-size: 1em; cursor: pointer; white-space: nowrap;
+            transition: 0.2s;
+        }
+        .search-box button:active { opacity: 0.8; transform: scale(0.96); }
+
+        #status { display: none; text-align: center; padding: 16px; border-radius: 12px; margin-bottom: 20px; font-weight: 500; }
+        #status.loading { display: block; background: var(--section-bg); color: #7ab; }
+        #status.error { display: block; background: rgba(200,0,0,0.1); color: var(--red); }
+
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+        .stat-card {
+            background: var(--card); border: 1px solid var(--border);
+            border-radius: 16px; padding: 14px 10px; text-align: center;
+            box-shadow: var(--shadow);
+        }
+        .stat-card .label { font-size: 0.8em; color: #999; margin-bottom: 4px; }
+        .stat-card .number { font-size: 1.8em; font-weight: 700; line-height: 1.2; }
+        .stat-card .total { font-size: 0.8em; color: #999; margin-top: 4px; }
+        .progress-track { height: 5px; background: var(--progress-bg); border-radius: 3px; margin: 6px 6px 0; overflow: hidden; }
+        .progress-fill { height: 100%; border-radius: 3px; transition: width 0.4s; }
+        .fill-green { background: var(--green); }
+        .fill-gold { background: var(--gold); }
+
+        .sub-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+        .sub-stat {
+            background: var(--card); border: 1px solid var(--border);
+            border-radius: 12px; padding: 12px; text-align: center;
+            box-shadow: var(--shadow);
+        }
+        .sub-stat .label { font-size: 0.8em; color: #999; }
+        .sub-stat .val { font-size: 1.4em; font-weight: 700; margin-top: 4px; }
+
+        .map-card {
+            background: var(--card); border: 1px solid var(--border);
+            border-radius: 16px; margin-bottom: 14px; overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        .map-title {
+            padding: 16px 18px; display: flex; justify-content: space-between;
+            align-items: center; font-weight: 700; font-size: 1em;
+            background: var(--section-bg); cursor: pointer; user-select: none;
+        }
+        .map-title .arrow { transition: 0.2s; font-size: 0.8em; color: #999; }
+        .map-title.open .arrow { transform: rotate(90deg); }
+        .map-detail { display: none; }
+        .map-detail.open { display: block; }
+
+        .wing-item {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 10px 18px; border-bottom: 1px solid rgba(128,128,128,0.08);
+            font-size: 0.9em;
+        }
+        .wing-item:last-child { border-bottom: none; }
+        .wing-loc { flex: 1; }
+        .wing-status { font-weight: 600; margin-right: 12px; min-width: 48px; text-align: right; }
+        .wing-time { font-size: 0.8em; color: #999; min-width: 70px; text-align: right; }
+        .collected-text { color: var(--green); }
+        .missing-text { color: var(--red); }
+
+        .toggle-all { text-align: center; margin: 12px 0 20px; }
+        .toggle-all button {
+            background: var(--card); border: 1px solid var(--border);
+            padding: 10px 24px; border-radius: 20px; font-size: 0.9em;
+            color: var(--gold); font-weight: 600; cursor: pointer;
+            box-shadow: var(--shadow);
+        }
+
+        @media (max-width: 400px) {
+            .stat-card .number { font-size: 1.6em; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🕊️ 光翼查询</h1>
+    <p class="subtitle">光·遇 藏宝阁数据 · 手机版</p>
+    <div class="search-box">
+        <input type="text" id="roleIdInput" placeholder="输入 Role ID" value="667511942">
+        <button id="queryBtn">查询</button>
+    </div>
+    <div id="status"></div>
+    <div id="result"></div>
+</div>
+
+<script>
+$(function() {
+    let wingMap = {};
+    let detailSubMap = {};
+    let dataReady = false;
+    const $status = $('#status');
+    const $result = $('#result');
+    const $roleId = $('#roleIdInput');
+    const $btn = $('#queryBtn');
+
+    function showStatus(cls, msg) { $status.attr('class', cls).text(msg).show(); }
+    function loadDetailSub() { return $.getJSON('sub_detail.json').done(d => detailSubMap = d).fail(() => {}); }
+    function loadWingData() {
+        return $.getJSON('wing_data.json').then(data => {
+            const list = Array.isArray(data) ? data : (data.wing_buffs || []);
+            wingMap = {};
+            list.forEach(item => {
+                const name = item['光翼名字'] || item.name;
+                wingMap[name] = {
+                    map: item['一级标签'] || item.map,
+                    sub: item['二级标签'] || item.sub || '',
+                    type: name.startsWith('l_') ? 'normal' : 'perm'
+                };
+            });
+        });
+    }
+
+    function formatTime(ts) {
+        if (!ts || ts === 0) return '未收集';
+        const d = new Date(ts * 1000);
+        return `${d.getMonth()+1}/${d.getDate()} ${d.getHours()}:${String(d.getMinutes()).padStart(2,'0')}`;
+    }
+
+    function getDetail(name, sub) {
+        if (detailSubMap[name]) return detailSubMap[name];
+        if (!sub) return '基础区域';
+        return sub;
+    }
+
+    async function doQuery() {
+        const roleId = $roleId.val().trim();
+        if (!roleId) return;
+        if (!dataReady) {
+            showStatus('loading', '加载配置中...');
+            await Promise.all([loadDetailSub(), loadWingData()]);
+            dataReady = true;
+        }
+        $btn.prop('disabled', true);
+        showStatus('loading', '查询角色数据...');
+        $result.hide().empty();
+        try {
+            const resp = await $.getJSON(`/query?roleId=${encodeURIComponent(roleId)}`);
+            if (resp.result !== 'ok') throw new Error('API返回异常');
+            render(resp.wing_buffs, roleId);
+            $status.hide();
+            $result.show();
+        } catch (e) {
+            showStatus('error', '❌ ' + e.message);
+        } finally {
+            $btn.prop('disabled', false);
+        }
+    }
+
+    function render(buffs, roleId) {
+        const playerMap = {};
+        buffs.forEach(b => { playerMap[b.name] = b; });
+
+        // 普通光翼统计
+        let nC = 0, nT = 0;
+        // 永久光翼统计
+        let pC = 0, pT = 0;               // 已收集/上限
+        let residentC = 0, residentT = 0; // 常驻先祖
+        let revisitC = 0, revisitT = 0;   // 复刻先祖
+        let droppedPerm = 0;              // 遗落永久翼 (deposited=true)
+
+        const mapGroups = {};
+
+        $.each(wingMap, (name, info) => {
+            const entry = playerMap[name];
+            const collected = entry?.collected === true;
+            const deposited = entry?.deposited === true;
+            const lastTime = entry?.last_conversion || 0;
+
+            if (info.type === 'normal') {
+                nT++;
+                if (collected) nC++;
+                const mapName = info.map;
+                if (!mapGroups[mapName]) mapGroups[mapName] = { _c:0, _t:0, wings:[] };
+                mapGroups[mapName]._t++;
+                if (collected) mapGroups[mapName]._c++;
+                mapGroups[mapName].wings.push({
+                    name, collected, lastTime,
+                    detail: getDetail(name, info.sub)
+                });
+            } else {
+                pT++;
+                if (collected) pC++;
+                if (info.map === '常驻永久' || info.map === '普通永久') {
+                    residentT++; if (collected) residentC++;
+                } else if (info.map === '复刻永久') {
+                    revisitT++; if (collected) revisitC++;
+                }
+                // 遗落：已解锁但 deposited 为 true
+                if (collected && deposited) droppedPerm++;
+            }
+        });
+
+        // 计算新指标
+        const totalOnBody = nC + pC;                     // 合计光翼
+        const charMax = 126 + pC;                         // 角色最大光翼
+        const globalMax = 126 + pT;                       // 国服最高光翼 (普通126 + 永久总数133)
+
+        let html = '';
+
+        // ---- 第一行：普通光翼 & 永久光翼 ----
+        html += `<div class="stats-grid">
+            <div class="stat-card">
+                <div class="label">普通光翼</div>
+                <div class="number" style="color:var(--green)">${nC}<span style="font-size:0.5em; color:var(--text)">/${nT}</span></div>
+                <div class="progress-track"><div class="progress-fill fill-green" style="width:${nT? nC/nT*100 : 0}%"></div></div>
+            </div>
+            <div class="stat-card">
+                <div class="label">永久光翼</div>
+                <div class="number" style="color:var(--gold)">${pC}<span style="font-size:0.5em; color:var(--text)">/${pT}</span></div>
+                <div class="progress-track"><div class="progress-fill fill-gold" style="width:${pT? pC/pT*100 : 0}%"></div></div>
+            </div>
+        </div>`;
+
+        // ---- 第二行：合计光翼 & 角色最大光翼 ----
+        html += `<div class="stats-grid">
+            <div class="stat-card">
+                <div class="label">合计光翼</div>
+                <div class="number">${totalOnBody}</div>
+                <div class="total">当前身上</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">角色最大光翼</div>
+                <div class="number">${charMax}</div>
+                <div class="total">126 + 已解锁永久</div>
+            </div>
+        </div>`;
+
+        // ---- 第三行：国服最高光翼 & 遗落永久翼 ----
+        html += `<div class="stats-grid">
+            <div class="stat-card">
+                <div class="label">国服最高光翼</div>
+                <div class="number">${globalMax}</div>
+                <div class="total">126 + ${pT} 永久</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">遗落永久翼</div>
+                <div class="number" style="color:var(--red)">${droppedPerm}</div>
+                <div class="total">已解锁但不在身</div>
+            </div>
+        </div>`;
+
+        // 常驻/复刻 小卡片
+        html += `<div class="sub-stats">
+            <div class="sub-stat"><div class="label">常驻先祖</div><div class="val">${residentC}/${residentT}</div></div>
+            <div class="sub-stat"><div class="label">复刻先祖</div><div class="val">${revisitC}/${revisitT}</div></div>
+        </div>`;
+
+        // 全部展开按钮
+        html += `<div class="toggle-all"><button id="toggleAllBtn">展开全部地图</button></div>`;
+
+        // 地图折叠列表
+        const order = ['晨岛','云野','雨林','霞谷','暮土','禁阁','暴风眼','破晓季','狂欢船队'];
+        order.forEach(mapName => {
+            const group = mapGroups[mapName];
+            if (!group) return;
+            html += `<div class="map-card">
+                <div class="map-title" data-map="${mapName}">
+                    <span>📍 ${mapName} <span style="font-weight:400; font-size:0.85em; color:#999;">${group._c}/${group._t}</span></span>
+                    <span class="arrow">▶</span>
+                </div>
+                <div class="map-detail">`;
+            group.wings.forEach(w => {
+                const cls = w.collected ? 'collected-text' : 'missing-text';
+                const status = w.collected ? '已收集' : '未收集';
+                const time = w.collected ? formatTime(w.lastTime) : '—';
+                html += `<div class="wing-item">
+                    <span class="wing-loc">${w.detail}</span>
+                    <span class="wing-status ${cls}">${status}</span>
+                    <span class="wing-time">${time}</span>
+                </div>`;
+            });
+            html += `</div></div>`;
+        });
+
+        $result.html(html);
+
+        // 折叠交互
+        $('.map-title').off('click').on('click', function() {
+            const $body = $(this).next('.map-detail');
+            $(this).toggleClass('open');
+            $body.slideToggle(200);
+        });
+        let allOpen = false;
+        $('#toggleAllBtn').off('click').on('click', function() {
+            allOpen = !allOpen;
+            $(this).text(allOpen ? '收起全部地图' : '展开全部地图');
+            if (allOpen) {
+                $('.map-detail').slideDown(200);
+                $('.map-title').addClass('open');
+            } else {
+                $('.map-detail').slideUp(200);
+                $('.map-title').removeClass('open');
+            }
+        });
+    }
+
+    // 初始化
+    loadDetailSub();
+    loadWingData().then(() => { dataReady = true; });
+    $btn.on('click', doQuery);
+    $roleId.on('keydown', e => { if (e.key === 'Enter') doQuery(); });
+});
+</script>
+</body>
+</html>
