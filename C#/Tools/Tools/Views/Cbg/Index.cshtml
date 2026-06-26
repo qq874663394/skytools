@@ -1,15 +1,16 @@
-
+﻿@{
+    // Layout = null;
+}
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
     <title>光遇账号估值 · 藏宝阁2026公式</title>
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js">
-    </script>
-    <script src="game_auto_config.js">
-    </script>
-    <style>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="~/js/data/game_auto_config.js"></script>
+    <script src="~/js/data/packs_data.js"></script>
+    <style type="text/css">
         * {
             margin: 0;
             padding: 0;
@@ -525,7 +526,7 @@
             color: #c0392b
         }
 
-        @media(max-width:500px) {
+        @@media(max-width:500px) {
             .pack-card {
                 width: 6em;
                 min-height: 6em
@@ -633,7 +634,6 @@
         <div class="float-section"><span class="float-label">难卖</span><span class="float-value" id="floatHard">¥0</span></div>
     </div>
 
-    <script src="packs_data.js"></script>
     <script>
         $(function () {
             const itemsData = PACKS_DATA;
@@ -697,11 +697,11 @@
                 hist.forEach(h => {
                     const sellerStr = h.sellerPrice > 0 ? ` 卖方价：¥${h.sellerPrice}` : '';
                     const $item = $(`<div class="history-item" data-id="${h.id}">
-                            <span class="hid">${h.id}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>🕯${h.candles} ❤${h.hearts} 👼${h.ascended} 📏${h.height} 💫${h.sc}  ${sellerStr}</span>
-                            <div class="hres">毕业季节：${h.seasonStr}</div>
-                            <div class="hres">核心礼包：${h.highlightStr}</div>
-                            <div class="hres">藏宝阁原文：<a href='${h.url}' target='_blank'>打开链接</a></div>
-                        </div>`);
+                                                                <span class="hid">${h.id}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>🕯${h.candles} ❤${h.hearts} 👼${h.ascended} 📏${h.height} 💫${h.sc}  ${sellerStr}</span>
+                                                                <div class="hres">毕业季节：${h.seasonStr}</div>
+                                                                <div class="hres">核心礼包：${h.highlightStr}</div>
+                                                                <div class="hres">藏宝阁原文：<a href='${h.url}' target='_blank'>打开链接</a></div>
+                                                            </div>`);
                     $item.on('click', function (e) {
                         if ($(e.target).is('a')) return; // 如果点击的是链接，不处理
                         $('#batchUrls').val(h.url);
