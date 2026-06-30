@@ -19,6 +19,7 @@ builder.Services.AddSingleton<HttpClientPool>();
 
 // Ëæ»ú UA Ìá¹©Æ÷
 builder.Services.AddSingleton<RandomUserAgentProvider>();
+//builder.Services.AddSingleton<SkySignature>();
 
 var app = builder.Build();
 

@@ -1,0 +1,1052 @@
+/* TID 0x2491 */
+  1819 ms  dlsym: glActiveTexture
+  1819 ms  dlsym: glActiveTexture
+  1820 ms    -> 0x76a4285a53c0 in libGLESv2.so
+  1820 ms  dlsym: glAttachShader
+  1820 ms  dlsym: glAttachShader
+  1820 ms    -> 0x76a4285a53e0 in libGLESv2.so
+  1820 ms  dlsym: glBindAttribLocation
+  1820 ms  dlsym: glBindAttribLocation
+  1820 ms    -> 0x76a4285a5400 in libGLESv2.so
+  1820 ms  dlsym: glBindBuffer
+  1820 ms  dlsym: glBindBuffer
+  1820 ms    -> 0x76a4285a5420 in libGLESv2.so
+  1820 ms  dlsym: glBindTexture
+  1820 ms  dlsym: glBindTexture
+  1820 ms    -> 0x76a4285a5480 in libGLESv2.so
+  1820 ms  dlsym: glBlendColor
+  1820 ms  dlsym: glBlendColor
+  1820 ms    -> 0x76a4285a54a0 in libGLESv2.so
+  1820 ms  dlsym: glBlendEquation
+  1820 ms  dlsym: glBlendEquation
+  1820 ms    -> 0x76a4285a54c0 in libGLESv2.so
+  1820 ms  dlsym: glBlendEquationSeparate
+  1820 ms  dlsym: glBlendEquationSeparate
+  1820 ms    -> 0x76a4285a54e0 in libGLESv2.so
+  1820 ms  dlsym: glBlendFunc
+  1821 ms  dlsym: glBlendFunc
+  1821 ms    -> 0x76a4285a5500 in libGLESv2.so
+  1821 ms  dlsym: glBlendFuncSeparate
+  1821 ms  dlsym: glBlendFuncSeparate
+  1821 ms    -> 0x76a4285a5520 in libGLESv2.so
+  1821 ms  dlsym: glBufferData
+  1821 ms  dlsym: glBufferData
+  1821 ms    -> 0x76a4285a5540 in libGLESv2.so
+  1821 ms  dlsym: glBufferSubData
+  1821 ms  dlsym: glBufferSubData
+  1821 ms    -> 0x76a4285a5560 in libGLESv2.so
+  1821 ms  dlsym: glClear
+  1821 ms  dlsym: glClear
+  1821 ms    -> 0x76a4285a55a0 in libGLESv2.so
+  1821 ms  dlsym: glClearColor
+  1821 ms  dlsym: glClearColor
+  1821 ms    -> 0x76a4285a55c0 in libGLESv2.so
+  1821 ms  dlsym: glClearDepth
+  1821 ms  dlsym: glClearDepth
+  1821 ms  dlsym: glClearDepth
+  1822 ms  dlsym: glClearDepth
+  1822 ms  dlsym: glClearDepth
+  1822 ms  dlsym: glClearStencil
+  1822 ms  dlsym: glClearStencil
+  1822 ms    -> 0x76a4285a5600 in libGLESv2.so
+  1822 ms  dlsym: glColorMask
+  1822 ms  dlsym: glColorMask
+  1822 ms    -> 0x76a4285a5620 in libGLESv2.so
+  1822 ms  dlsym: glCompileShader
+  1822 ms  dlsym: glCompileShader
+  1822 ms    -> 0x76a4285a5640 in libGLESv2.so
+  1822 ms  dlsym: glCompressedTexImage2D
+  1822 ms  dlsym: glCompressedTexImage2D
+  1822 ms    -> 0x76a4285a5660 in libGLESv2.so
+  1822 ms  dlsym: glCompressedTexSubImage2D
+  1822 ms  dlsym: glCompressedTexSubImage2D
+  1822 ms    -> 0x76a4285a5680 in libGLESv2.so
+  1823 ms  dlsym: glCopyTexImage2D
+  1823 ms  dlsym: glCopyTexImage2D
+  1823 ms    -> 0x76a4285a56a0 in libGLESv2.so
+  1823 ms  dlsym: glCopyTexSubImage2D
+  1823 ms  dlsym: glCopyTexSubImage2D
+  1823 ms    -> 0x76a4285a56c0 in libGLESv2.so
+  1823 ms  dlsym: glCreateProgram
+  1823 ms  dlsym: glCreateProgram
+  1823 ms    -> 0x76a4285a56e0 in libGLESv2.so
+  1823 ms  dlsym: glCreateShader
+  1823 ms  dlsym: glCreateShader
+  1823 ms    -> 0x76a4285a5700 in libGLESv2.so
+  1823 ms  dlsym: glCullFace
+  1823 ms  dlsym: glCullFace
+  1823 ms    -> 0x76a4285a5720 in libGLESv2.so
+  1823 ms  dlsym: glDeleteBuffers
+  1823 ms  dlsym: glDeleteBuffers
+  1823 ms    -> 0x76a4285a5740 in libGLESv2.so
+  1823 ms  dlsym: glDeleteProgram
+  1823 ms  dlsym: glDeleteProgram
+  1823 ms    -> 0x76a4285a5780 in libGLESv2.so
+  1823 ms  dlsym: glDeleteShader
+  1824 ms  dlsym: glDeleteShader
+  1824 ms    -> 0x76a4285a57c0 in libGLESv2.so
+  1824 ms  dlsym: glDeleteTextures
+  1824 ms  dlsym: glDeleteTextures
+  1824 ms    -> 0x76a4285a57e0 in libGLESv2.so
+  1824 ms  dlsym: glDepthFunc
+  1824 ms  dlsym: glDepthFunc
+  1824 ms    -> 0x76a4285a5800 in libGLESv2.so
+  1824 ms  dlsym: glDepthMask
+  1824 ms  dlsym: glDepthMask
+  1824 ms    -> 0x76a4285a5820 in libGLESv2.so
+  1824 ms  dlsym: glDepthRange
+  1824 ms  dlsym: glDepthRange
+  1824 ms  dlsym: glDepthRange
+  1824 ms  dlsym: glDepthRange
+  1824 ms  dlsym: glDepthRange
+  1824 ms  dlsym: glDetachShader
+  1824 ms  dlsym: glDetachShader
+  1824 ms    -> 0x76a4285a5860 in libGLESv2.so
+  1824 ms  dlsym: glDisable
+  1824 ms  dlsym: glDisable
+  1824 ms    -> 0x76a4285a5880 in libGLESv2.so
+  1824 ms  dlsym: glDisableVertexAttribArray
+  1824 ms  dlsym: glDisableVertexAttribArray
+  1825 ms    -> 0x76a4285a58a0 in libGLESv2.so
+  1825 ms  dlsym: glDrawArrays
+  1825 ms  dlsym: glDrawArrays
+  1825 ms    -> 0x76a4285a58c0 in libGLESv2.so
+  1825 ms  dlsym: glDrawElements
+  1825 ms  dlsym: glDrawElements
+  1825 ms    -> 0x76a4285a58e0 in libGLESv2.so
+  1825 ms  dlsym: glEnable
+  1825 ms  dlsym: glEnable
+  1825 ms    -> 0x76a4285a5900 in libGLESv2.so
+  1825 ms  dlsym: glEnableVertexAttribArray
+  1825 ms  dlsym: glEnableVertexAttribArray
+  1825 ms    -> 0x76a4285a5920 in libGLESv2.so
+  1825 ms  dlsym: glFinish
+  1825 ms  dlsym: glFinish
+  1825 ms    -> 0x76a4285a5940 in libGLESv2.so
+  1825 ms  dlsym: glFlush
+  1825 ms  dlsym: glFlush
+  1825 ms    -> 0x76a4285a5960 in libGLESv2.so
+  1825 ms  dlsym: glFrontFace
+  1825 ms  dlsym: glFrontFace
+  1825 ms    -> 0x76a4285a59c0 in libGLESv2.so
+  1825 ms  dlsym: glGenBuffers
+  1825 ms  dlsym: glGenBuffers
+  1825 ms    -> 0x76a4285a59e0 in libGLESv2.so
+  1825 ms  dlsym: glGenTextures
+  1825 ms  dlsym: glGenTextures
+  1825 ms    -> 0x76a4285a5a60 in libGLESv2.so
+  1825 ms  dlsym: glGetActiveAttrib
+  1825 ms  dlsym: glGetActiveAttrib
+  1825 ms    -> 0x76a4285a5a80 in libGLESv2.so
+  1825 ms  dlsym: glGetActiveUniform
+  1825 ms  dlsym: glGetActiveUniform
+  1826 ms    -> 0x76a4285a5aa0 in libGLESv2.so
+  1826 ms  dlsym: glGetAttachedShaders
+  1826 ms  dlsym: glGetAttachedShaders
+  1826 ms    -> 0x76a4285a5ac0 in libGLESv2.so
+  1826 ms  dlsym: glGetAttribLocation
+  1826 ms  dlsym: glGetAttribLocation
+  1826 ms    -> 0x76a4285a5ae0 in libGLESv2.so
+  1826 ms  dlsym: glGetBooleanv
+  1826 ms  dlsym: glGetBooleanv
+  1826 ms    -> 0x76a4285abd00 in libGLESv2.so
+  1826 ms  dlsym: glGetBufferParameteriv
+  1826 ms  dlsym: glGetBufferParameteriv
+  1826 ms    -> 0x76a4285a5b00 in libGLESv2.so
+  1826 ms  dlsym: glGetError
+  1826 ms  dlsym: glGetError
+  1826 ms    -> 0x76a4285a5b20 in libGLESv2.so
+  1826 ms  dlsym: glGetFloatv
+  1826 ms  dlsym: glGetFloatv
+  1826 ms    -> 0x76a4285abd30 in libGLESv2.so
+  1826 ms  dlsym: glGetIntegerv
+  1826 ms  dlsym: glGetIntegerv
+  1826 ms    -> 0x76a4285abd60 in libGLESv2.so
+  1826 ms  dlsym: glGetProgramInfoLog
+  1826 ms  dlsym: glGetProgramInfoLog
+  1826 ms    -> 0x76a4285a5b80 in libGLESv2.so
+  1826 ms  dlsym: glGetProgramiv
+  1826 ms  dlsym: glGetProgramiv
+  1826 ms    -> 0x76a4285a5b60 in libGLESv2.so
+  1826 ms  dlsym: glGetShaderInfoLog
+  1826 ms  dlsym: glGetShaderInfoLog
+  1827 ms    -> 0x76a4285a5be0 in libGLESv2.so
+  1827 ms  dlsym: glGetShaderiv
+  1827 ms  dlsym: glGetShaderiv
+  1827 ms    -> 0x76a4285a5bc0 in libGLESv2.so
+  1827 ms  dlsym: glGetShaderSource
+  1827 ms  dlsym: glGetShaderSource
+  1827 ms    -> 0x76a4285a5c20 in libGLESv2.so
+  1827 ms  dlsym: glGetString
+  1827 ms  dlsym: glGetString
+  1827 ms    -> 0x76a4285abcc0 in libGLESv2.so
+  1827 ms  dlsym: glGetStringi
+  1827 ms  dlsym: glGetStringi
+  1827 ms    -> 0x76a4285abce0 in libGLESv2.so
+  1827 ms  dlsym: glGetTexParameterfv
+  1827 ms  dlsym: glGetTexParameterfv
+  1827 ms    -> 0x76a4285a5c40 in libGLESv2.so
+  1827 ms  dlsym: glGetTexParameteriv
+  1827 ms  dlsym: glGetTexParameteriv
+  1827 ms    -> 0x76a4285a5c60 in libGLESv2.so
+  1827 ms  dlsym: glGetUniformfv
+  1827 ms  dlsym: glGetUniformfv
+  1827 ms    -> 0x76a4285a5c80 in libGLESv2.so
+  1827 ms  dlsym: glGetUniformiv
+  1827 ms  dlsym: glGetUniformiv
+  1827 ms    -> 0x76a4285a5ca0 in libGLESv2.so
+  1827 ms  dlsym: glGetUniformLocation
+  1827 ms  dlsym: glGetUniformLocation
+  1827 ms    -> 0x76a4285a5cc0 in libGLESv2.so
+  1827 ms  dlsym: glGetVertexAttribfv
+  1827 ms  dlsym: glGetVertexAttribfv
+  1828 ms    -> 0x76a4285a5ce0 in libGLESv2.so
+  1828 ms  dlsym: glGetVertexAttribiv
+  1828 ms  dlsym: glGetVertexAttribiv
+  1828 ms    -> 0x76a4285a5d00 in libGLESv2.so
+  1828 ms  dlsym: glGetVertexAttribPointerv
+  1828 ms  dlsym: glGetVertexAttribPointerv
+  1828 ms    -> 0x76a4285a5d20 in libGLESv2.so
+  1828 ms  dlsym: glHint
+  1828 ms  dlsym: glHint
+  1828 ms    -> 0x76a4285a5d40 in libGLESv2.so
+  1828 ms  dlsym: glIsBuffer
+  1828 ms  dlsym: glIsBuffer
+  1828 ms    -> 0x76a4285a5d60 in libGLESv2.so
+  1828 ms  dlsym: glIsEnabled
+  1828 ms  dlsym: glIsEnabled
+  1828 ms    -> 0x76a4285a5d80 in libGLESv2.so
+  1828 ms  dlsym: glIsProgram
+  1828 ms  dlsym: glIsProgram
+  1828 ms    -> 0x76a4285a5dc0 in libGLESv2.so
+  1828 ms  dlsym: glIsShader
+  1828 ms  dlsym: glIsShader
+  1828 ms    -> 0x76a4285a5e00 in libGLESv2.so
+  1828 ms  dlsym: glIsTexture
+  1828 ms  dlsym: glIsTexture
+  1828 ms    -> 0x76a4285a5e20 in libGLESv2.so
+  1828 ms  dlsym: glLineWidth
+  1828 ms  dlsym: glLineWidth
+  1828 ms    -> 0x76a4285a5e40 in libGLESv2.so
+  1828 ms  dlsym: glLinkProgram
+  1828 ms  dlsym: glLinkProgram
+  1828 ms    -> 0x76a4285a5e60 in libGLESv2.so
+  1828 ms  dlsym: glPixelStorei
+  1828 ms  dlsym: glPixelStorei
+  1828 ms    -> 0x76a4285a5e80 in libGLESv2.so
+  1828 ms  dlsym: glPolygonOffset
+  1829 ms  dlsym: glPolygonOffset
+  1829 ms    -> 0x76a4285a5ea0 in libGLESv2.so
+  1829 ms  dlsym: glReadPixels
+  1829 ms  dlsym: glReadPixels
+  1829 ms    -> 0x76a4285a5ec0 in libGLESv2.so
+  1829 ms  dlsym: glSampleCoverage
+  1829 ms  dlsym: glSampleCoverage
+  1829 ms    -> 0x76a4285a5f20 in libGLESv2.so
+  1829 ms  dlsym: glScissor
+  1829 ms  dlsym: glScissor
+  1829 ms    -> 0x76a4285a5f40 in libGLESv2.so
+  1829 ms  dlsym: glShaderSource
+  1829 ms  dlsym: glShaderSource
+  1829 ms    -> 0x76a4285a5f80 in libGLESv2.so
+  1829 ms  dlsym: glStencilFunc
+  1829 ms  dlsym: glStencilFunc
+  1829 ms    -> 0x76a4285a5fa0 in libGLESv2.so
+  1829 ms  dlsym: glStencilFuncSeparate
+  1829 ms  dlsym: glStencilFuncSeparate
+  1829 ms    -> 0x76a4285a5fc0 in libGLESv2.so
+  1829 ms  dlsym: glStencilMask
+  1829 ms  dlsym: glStencilMask
+  1829 ms    -> 0x76a4285a5fe0 in libGLESv2.so
+  1829 ms  dlsym: glStencilMaskSeparate
+  1829 ms  dlsym: glStencilMaskSeparate
+  1829 ms    -> 0x76a4285a6000 in libGLESv2.so
+  1829 ms  dlsym: glStencilOp
+  1830 ms  dlsym: glStencilOp
+  1830 ms    -> 0x76a4285a6020 in libGLESv2.so
+  1830 ms  dlsym: glStencilOpSeparate
+  1830 ms  dlsym: glStencilOpSeparate
+  1830 ms    -> 0x76a4285a6040 in libGLESv2.so
+  1830 ms  dlsym: glTexImage2D
+  1830 ms  dlsym: glTexImage2D
+  1830 ms    -> 0x76a4285a6060 in libGLESv2.so
+  1830 ms  dlsym: glTexParameterf
+  1830 ms  dlsym: glTexParameterf
+  1830 ms    -> 0x76a4285a6080 in libGLESv2.so
+  1830 ms  dlsym: glTexParameterfv
+  1830 ms  dlsym: glTexParameterfv
+  1830 ms    -> 0x76a4285a60a0 in libGLESv2.so
+  1830 ms  dlsym: glTexParameteri
+  1830 ms  dlsym: glTexParameteri
+  1830 ms    -> 0x76a4285a60c0 in libGLESv2.so
+  1830 ms  dlsym: glTexParameteriv
+  1830 ms  dlsym: glTexParameteriv
+  1830 ms    -> 0x76a4285a60e0 in libGLESv2.so
+  1830 ms  dlsym: glTexSubImage2D
+  1830 ms  dlsym: glTexSubImage2D
+  1830 ms    -> 0x76a4285a6100 in libGLESv2.so
+  1830 ms  dlsym: glUniform1f
+  1830 ms  dlsym: glUniform1f
+  1830 ms    -> 0x76a4285a6120 in libGLESv2.so
+  1830 ms  dlsym: glUniform1fv
+  1830 ms  dlsym: glUniform1fv
+  1830 ms    -> 0x76a4285a6140 in libGLESv2.so
+  1830 ms  dlsym: glUniform1i
+  1831 ms  dlsym: glUniform1i
+  1831 ms    -> 0x76a4285a6160 in libGLESv2.so
+  1831 ms  dlsym: glUniform1iv
+  1831 ms  dlsym: glUniform1iv
+  1831 ms    -> 0x76a4285a6180 in libGLESv2.so
+  1831 ms  dlsym: glUniform2f
+  1831 ms  dlsym: glUniform2f
+  1831 ms    -> 0x76a4285a61a0 in libGLESv2.so
+  1831 ms  dlsym: glUniform2fv
+  1831 ms  dlsym: glUniform2fv
+  1831 ms    -> 0x76a4285a61c0 in libGLESv2.so
+  1831 ms  dlsym: glUniform2i
+  1831 ms  dlsym: glUniform2i
+  1831 ms    -> 0x76a4285a61e0 in libGLESv2.so
+  1831 ms  dlsym: glUniform2iv
+  1831 ms  dlsym: glUniform2iv
+  1831 ms    -> 0x76a4285a6200 in libGLESv2.so
+  1831 ms  dlsym: glUniform3f
+  1831 ms  dlsym: glUniform3f
+  1831 ms    -> 0x76a4285a6220 in libGLESv2.so
+  1831 ms  dlsym: glUniform3fv
+  1831 ms  dlsym: glUniform3fv
+  1831 ms    -> 0x76a4285a6240 in libGLESv2.so
+  1831 ms  dlsym: glUniform3i
+  1831 ms  dlsym: glUniform3i
+  1831 ms    -> 0x76a4285a6260 in libGLESv2.so
+  1831 ms  dlsym: glUniform3iv
+  1831 ms  dlsym: glUniform3iv
+  1831 ms    -> 0x76a4285a6280 in libGLESv2.so
+  1831 ms  dlsym: glUniform4f
+  1831 ms  dlsym: glUniform4f
+  1832 ms    -> 0x76a4285a62a0 in libGLESv2.so
+  1832 ms  dlsym: glUniform4fv
+  1832 ms  dlsym: glUniform4fv
+  1832 ms    -> 0x76a4285a62c0 in libGLESv2.so
+  1832 ms  dlsym: glUniform4i
+  1832 ms  dlsym: glUniform4i
+  1832 ms    -> 0x76a4285a62e0 in libGLESv2.so
+  1832 ms  dlsym: glUniform4iv
+  1832 ms  dlsym: glUniform4iv
+  1832 ms    -> 0x76a4285a6300 in libGLESv2.so
+  1832 ms  dlsym: glUniformMatrix2fv
+  1832 ms  dlsym: glUniformMatrix2fv
+  1832 ms    -> 0x76a4285a6320 in libGLESv2.so
+  1832 ms  dlsym: glUniformMatrix3fv
+  1832 ms  dlsym: glUniformMatrix3fv
+  1832 ms    -> 0x76a4285a6340 in libGLESv2.so
+  1832 ms  dlsym: glUniformMatrix4fv
+  1832 ms  dlsym: glUniformMatrix4fv
+  1832 ms    -> 0x76a4285a6360 in libGLESv2.so
+  1832 ms  dlsym: glUseProgram
+  1832 ms  dlsym: glUseProgram
+  1832 ms    -> 0x76a4285a6380 in libGLESv2.so
+  1832 ms  dlsym: glValidateProgram
+  1832 ms  dlsym: glValidateProgram
+  1832 ms    -> 0x76a4285a63a0 in libGLESv2.so
+  1832 ms  dlsym: glVertexAttrib1f
+  1832 ms  dlsym: glVertexAttrib1f
+  1832 ms    -> 0x76a4285a63c0 in libGLESv2.so
+  1832 ms  dlsym: glVertexAttrib1fv
+  1832 ms  dlsym: glVertexAttrib1fv
+  1832 ms    -> 0x76a4285a63e0 in libGLESv2.so
+  1832 ms  dlsym: glVertexAttrib2f
+  1832 ms  dlsym: glVertexAttrib2f
+  1833 ms    -> 0x76a4285a6400 in libGLESv2.so
+  1833 ms  dlsym: glVertexAttrib2fv
+  1833 ms  dlsym: glVertexAttrib2fv
+  1833 ms    -> 0x76a4285a6420 in libGLESv2.so
+  1833 ms  dlsym: glVertexAttrib3f
+  1833 ms  dlsym: glVertexAttrib3f
+  1833 ms    -> 0x76a4285a6440 in libGLESv2.so
+  1833 ms  dlsym: glVertexAttrib3fv
+  1833 ms  dlsym: glVertexAttrib3fv
+  1833 ms    -> 0x76a4285a6460 in libGLESv2.so
+  1833 ms  dlsym: glVertexAttrib4f
+  1833 ms  dlsym: glVertexAttrib4f
+  1833 ms    -> 0x76a4285a6480 in libGLESv2.so
+  1833 ms  dlsym: glVertexAttrib4fv
+  1833 ms  dlsym: glVertexAttrib4fv
+  1833 ms    -> 0x76a4285a64a0 in libGLESv2.so
+  1833 ms  dlsym: glVertexAttribPointer
+  1833 ms  dlsym: glVertexAttribPointer
+  1833 ms    -> 0x76a4285a64c0 in libGLESv2.so
+  1833 ms  dlsym: glViewport
+  1833 ms  dlsym: glViewport
+  1833 ms    -> 0x76a4285a64e0 in libGLESv2.so
+  1833 ms  dlsym: glActiveShaderProgram
+  1833 ms  dlsym: glActiveShaderProgram
+  1833 ms    -> 0x76a4285a7340 in libGLESv2.so
+  1833 ms  dlsym: glBeginQuery
+  1833 ms  dlsym: glBeginQuery
+  1834 ms    -> 0x76a4285a6640 in libGLESv2.so
+  1834 ms  dlsym: glBeginTransformFeedback
+  1834 ms  dlsym: glBeginTransformFeedback
+  1834 ms    -> 0x76a4285a6920 in libGLESv2.so
+  1834 ms  dlsym: glBindBufferBase
+  1834 ms  dlsym: glBindBufferBase
+  1834 ms    -> 0x76a4285a6980 in libGLESv2.so
+  1834 ms  dlsym: glBindBufferRange
+  1834 ms  dlsym: glBindBufferRange
+  1834 ms    -> 0x76a4285a6960 in libGLESv2.so
+  1834 ms  dlsym: glBindFramebuffer
+  1834 ms  dlsym: glBindFramebuffer
+  1834 ms    -> 0x76a4285a5440 in libGLESv2.so
+  1834 ms  dlsym: glBindImageTexture
+  1834 ms  dlsym: glBindImageTexture
+  1834 ms    -> 0x76a4285a7880 in libGLESv2.so
+  1834 ms  dlsym: glBindProgramPipeline
+  1834 ms  dlsym: glBindProgramPipeline
+  1834 ms    -> 0x76a4285a7380 in libGLESv2.so
+  1834 ms  dlsym: glBindRenderbuffer
+  1834 ms  dlsym: glBindRenderbuffer
+  1834 ms    -> 0x76a4285a5460 in libGLESv2.so
+  1834 ms  dlsym: glBindSampler
+  1834 ms  dlsym: glBindSampler
+  1834 ms    -> 0x76a4285a6f00 in libGLESv2.so
+  1834 ms  dlsym: glBindTransformFeedback
+  1834 ms  dlsym: glBindTransformFeedback
+  1834 ms    -> 0x76a4285a7000 in libGLESv2.so
+  1834 ms  dlsym: glBindVertexArray
+  1835 ms  dlsym: glBindVertexArray
+  1835 ms    -> 0x76a4285a6880 in libGLESv2.so
+  1835 ms  dlsym: glBindVertexBuffer
+  1835 ms  dlsym: glBindVertexBuffer
+  1835 ms    -> 0x76a4285a79a0 in libGLESv2.so
+  1835 ms  dlsym: glBlendBarrierKHR
+  1835 ms  dlsym: glBlendBarrierKHR
+  1835 ms    -> 0x76a4285a7fc0 in libGLESv2.so
+  1835 ms  dlsym: glBlendEquationi
+  1835 ms  dlsym: glBlendEquationi
+  1835 ms    -> 0x76a4285a7c20 in libGLESv2.so
+  1835 ms  dlsym: glBlendEquationSeparatei
+  1835 ms  dlsym: glBlendEquationSeparatei
+  1835 ms    -> 0x76a4285a7c40 in libGLESv2.so
+  1835 ms  dlsym: glBlendFunci
+  1835 ms  dlsym: glBlendFunci
+  1835 ms    -> 0x76a4285a7c60 in libGLESv2.so
+  1835 ms  dlsym: glBlendFuncSeparatei
+  1835 ms  dlsym: glBlendFuncSeparatei
+  1835 ms    -> 0x76a4285a7c80 in libGLESv2.so
+  1835 ms  dlsym: glBlitFramebuffer
+  1835 ms  dlsym: glBlitFramebuffer
+  1835 ms    -> 0x76a4285a67e0 in libGLESv2.so
+  1835 ms  dlsym: glCheckFramebufferStatus
+  1835 ms  dlsym: glCheckFramebufferStatus
+  1835 ms    -> 0x76a4285a5580 in libGLESv2.so
+  1835 ms  dlsym: glClearBufferfi
+  1835 ms  dlsym: glClearBufferfi
+  1835 ms    -> 0x76a4285a6c60 in libGLESv2.so
+  1835 ms  dlsym: glClearBufferfv
+  1835 ms  dlsym: glClearBufferfv
+  1835 ms    -> 0x76a4285a6c40 in libGLESv2.so
+  1836 ms  dlsym: glClearBufferiv
+  1836 ms  dlsym: glClearBufferiv
+  1836 ms    -> 0x76a4285a6c00 in libGLESv2.so
+  1836 ms  dlsym: glClearBufferuiv
+  1836 ms  dlsym: glClearBufferuiv
+  1836 ms    -> 0x76a4285a6c20 in libGLESv2.so
+  1836 ms  dlsym: glClearDepthf
+  1836 ms  dlsym: glClearDepthf
+  1836 ms    -> 0x76a4285a55e0 in libGLESv2.so
+  1836 ms  dlsym: glClientWaitSync
+  1836 ms  dlsym: glClientWaitSync
+  1836 ms    -> 0x76a4285a6e00 in libGLESv2.so
+  1836 ms  dlsym: glColorMaski
+  1836 ms  dlsym: glColorMaski
+  1836 ms    -> 0x76a4285a7ca0 in libGLESv2.so
+  1836 ms  dlsym: glCompressedTexImage3D
+  1836 ms  dlsym: glCompressedTexImage3D
+  1836 ms    -> 0x76a4285a65a0 in libGLESv2.so
+  1836 ms  dlsym: glCompressedTexSubImage3D
+  1836 ms  dlsym: glCompressedTexSubImage3D
+  1836 ms    -> 0x76a4285a65c0 in libGLESv2.so
+  1836 ms  dlsym: glCopyBufferSubData
+  1836 ms  dlsym: glCopyBufferSubData
+  1836 ms    -> 0x76a4285a6c80 in libGLESv2.so
+  1836 ms  dlsym: glCopyTexSubImage3D
+  1836 ms  dlsym: glCopyTexSubImage3D
+  1836 ms    -> 0x76a4285a6580 in libGLESv2.so
+  1836 ms  dlsym: glCreateShaderProgramv
+  1836 ms  dlsym: glCreateShaderProgramv
+  1836 ms    -> 0x76a4285a7360 in libGLESv2.so
+  1836 ms  dlsym: glDebugMessageCallback
+  1836 ms  dlsym: glDebugMessageCallback
+  1837 ms    -> 0x76a4285a7ac0 in libGLESv2.so
+  1837 ms  dlsym: glDebugMessageControl
+  1837 ms  dlsym: glDebugMessageControl
+  1837 ms    -> 0x76a4285a7a80 in libGLESv2.so
+  1837 ms  dlsym: glDebugMessageInsert
+  1837 ms  dlsym: glDebugMessageInsert
+  1837 ms    -> 0x76a4285a7aa0 in libGLESv2.so
+  1837 ms  dlsym: glDeleteFramebuffers
+  1837 ms  dlsym: glDeleteFramebuffers
+  1837 ms    -> 0x76a4285a5760 in libGLESv2.so
+  1837 ms  dlsym: glDeleteProgramPipelines
+  1837 ms  dlsym: glDeleteProgramPipelines
+  1837 ms    -> 0x76a4285a73a0 in libGLESv2.so
+  1837 ms  dlsym: glDeleteQueries
+  1837 ms  dlsym: glDeleteQueries
+  1837 ms    -> 0x76a4285a6600 in libGLESv2.so
+  1837 ms  dlsym: glDeleteRenderbuffers
+  1837 ms  dlsym: glDeleteRenderbuffers
+  1837 ms    -> 0x76a4285a57a0 in libGLESv2.so
+  1837 ms  dlsym: glDeleteSamplers
+  1837 ms  dlsym: glDeleteSamplers
+  1837 ms    -> 0x76a4285a6ec0 in libGLESv2.so
+  1837 ms  dlsym: glDeleteSync
+  1837 ms  dlsym: glDeleteSync
+  1837 ms    -> 0x76a4285a6de0 in libGLESv2.so
+  1837 ms  dlsym: glDeleteTransformFeedbacks
+  1837 ms  dlsym: glDeleteTransformFeedbacks
+  1837 ms    -> 0x76a4285a7020 in libGLESv2.so
+  1838 ms  dlsym: glDeleteVertexArrays
+  1838 ms  dlsym: glDeleteVertexArrays
+  1838 ms    -> 0x76a4285a68a0 in libGLESv2.so
+  1838 ms  dlsym: glDepthRangef
+  1838 ms  dlsym: glDepthRangef
+  1838 ms    -> 0x76a4285a5840 in libGLESv2.so
+  1838 ms  dlsym: glDisablei
+  1838 ms  dlsym: glDisablei
+  1838 ms    -> 0x76a4285a7c00 in libGLESv2.so
+  1838 ms  dlsym: glDiscardFramebufferEXT
+  1838 ms  dlsym: glDiscardFramebufferEXT
+  1838 ms    -> 0x76a4285a8ea0 in libGLESv2.so
+  1838 ms  dlsym: glDispatchCompute
+  1838 ms  dlsym: glDispatchCompute
+  1838 ms    -> 0x76a4285a71c0 in libGLESv2.so
+  1838 ms  dlsym: glDispatchComputeIndirect
+  1838 ms  dlsym: glDispatchComputeIndirect
+  1838 ms    -> 0x76a4285a71e0 in libGLESv2.so
+  1838 ms  dlsym: glDrawArraysIndirect
+  1838 ms  dlsym: glDrawArraysIndirect
+  1838 ms    -> 0x76a4285a7200 in libGLESv2.so
+  1838 ms  dlsym: glDrawArraysInstanced
+  1838 ms  dlsym: glDrawArraysInstanced
+  1838 ms    -> 0x76a4285a6d60 in libGLESv2.so
+  1838 ms  dlsym: glDrawBuffers
+  1838 ms  dlsym: glDrawBuffers
+  1838 ms    -> 0x76a4285a6700 in libGLESv2.so
+  1838 ms  dlsym: glDrawElementsIndirect
+  1839 ms  dlsym: glDrawElementsIndirect
+  1839 ms    -> 0x76a4285a7220 in libGLESv2.so
+  1839 ms  dlsym: glDrawElementsInstanced
+  1839 ms  dlsym: glDrawElementsInstanced
+  1839 ms    -> 0x76a4285a6d80 in libGLESv2.so
+  1839 ms  dlsym: glDrawRangeElements
+  1839 ms  dlsym: glDrawRangeElements
+  1839 ms    -> 0x76a4285a6520 in libGLESv2.so
+  1839 ms  dlsym: glEGLImageTargetRenderbufferStorageOES
+  1839 ms  dlsym: glEGLImageTargetRenderbufferStorageOES
+  1839 ms    -> 0x76a4285a8220 in libGLESv2.so
+  1839 ms  dlsym: glEGLImageTargetTexture2DOES
+  1839 ms  dlsym: glEGLImageTargetTexture2DOES
+  1839 ms    -> 0x76a4285a8200 in libGLESv2.so
+  1839 ms  dlsym: glEnablei
+  1839 ms  dlsym: glEnablei
+  1839 ms    -> 0x76a4285a7be0 in libGLESv2.so
+  1839 ms  dlsym: glEndQuery
+  1839 ms  dlsym: glEndQuery
+  1839 ms    -> 0x76a4285a6660 in libGLESv2.so
+  1839 ms  dlsym: glEndTransformFeedback
+  1839 ms  dlsym: glEndTransformFeedback
+  1839 ms    -> 0x76a4285a6940 in libGLESv2.so
+  1839 ms  dlsym: glFenceSync
+  1839 ms  dlsym: glFenceSync
+  1839 ms    -> 0x76a4285a6da0 in libGLESv2.so
+  1839 ms  dlsym: glFlushMappedBufferRange
+  1839 ms  dlsym: glFlushMappedBufferRange
+  1839 ms    -> 0x76a4285a6860 in libGLESv2.so
+  1839 ms  dlsym: glFramebufferParameteri
+  1839 ms  dlsym: glFramebufferParameteri
+  1839 ms    -> 0x76a4285a7240 in libGLESv2.so
+  1839 ms  dlsym: glFramebufferRenderbuffer
+  1840 ms  dlsym: glFramebufferRenderbuffer
+  1840 ms    -> 0x76a4285a5980 in libGLESv2.so
+  1840 ms  dlsym: glFramebufferTexture2D
+  1840 ms  dlsym: glFramebufferTexture2D
+  1840 ms    -> 0x76a4285a59a0 in libGLESv2.so
+  1840 ms  dlsym: glFramebufferTexture2DMultisampleEXT
+  1840 ms  dlsym: glFramebufferTexture2DMultisampleEXT
+  1840 ms    -> 0x76a4285a95c0 in libGLESv2.so
+  1840 ms  dlsym: glFramebufferTextureLayer
+  1840 ms  dlsym: glFramebufferTextureLayer
+  1840 ms    -> 0x76a4285a6820 in libGLESv2.so
+  1840 ms  dlsym: glGenerateMipmap
+  1840 ms  dlsym: glGenerateMipmap
+  1840 ms    -> 0x76a4285a5a00 in libGLESv2.so
+  1840 ms  dlsym: glGenFramebuffers
+  1840 ms  dlsym: glGenFramebuffers
+  1840 ms    -> 0x76a4285a5a20 in libGLESv2.so
+  1840 ms  dlsym: glGenProgramPipelines
+  1840 ms  dlsym: glGenProgramPipelines
+  1840 ms    -> 0x76a4285a73c0 in libGLESv2.so
+  1840 ms  dlsym: glGenQueries
+  1840 ms  dlsym: glGenQueries
+  1840 ms    -> 0x76a4285a65e0 in libGLESv2.so
+  1840 ms  dlsym: glGenRenderbuffers
+  1840 ms  dlsym: glGenRenderbuffers
+  1840 ms    -> 0x76a4285a5a40 in libGLESv2.so
+  1840 ms  dlsym: glGenSamplers
+  1840 ms  dlsym: glGenSamplers
+  1840 ms    -> 0x76a4285a6ea0 in libGLESv2.so
+  1840 ms  dlsym: glGenTransformFeedbacks
+  1840 ms  dlsym: glGenTransformFeedbacks
+  1841 ms    -> 0x76a4285a7040 in libGLESv2.so
+  1841 ms  dlsym: glGenVertexArrays
+  1841 ms  dlsym: glGenVertexArrays
+  1841 ms    -> 0x76a4285a68c0 in libGLESv2.so
+  1841 ms  dlsym: glGetActiveUniformBlockiv
+  1841 ms  dlsym: glGetActiveUniformBlockiv
+  1841 ms    -> 0x76a4285a6d00 in libGLESv2.so
+  1841 ms  dlsym: glGetActiveUniformBlockName
+  1841 ms  dlsym: glGetActiveUniformBlockName
+  1841 ms    -> 0x76a4285a6d20 in libGLESv2.so
+  1841 ms  dlsym: glGetActiveUniformsiv
+  1841 ms  dlsym: glGetActiveUniformsiv
+  1841 ms    -> 0x76a4285a6cc0 in libGLESv2.so
+  1841 ms  dlsym: glGetBooleani_v
+  1841 ms  dlsym: glGetBooleani_v
+  1841 ms    -> 0x76a4285a78a0 in libGLESv2.so
+  1841 ms  dlsym: glGetDebugMessageLog
+  1841 ms  dlsym: glGetDebugMessageLog
+  1841 ms    -> 0x76a4285a7ae0 in libGLESv2.so
+  1841 ms  dlsym: glGetFragDataLocation
+  1841 ms  dlsym: glGetFragDataLocation
+  1841 ms    -> 0x76a4285a6ae0 in libGLESv2.so
+  1841 ms  dlsym: glGetFramebufferAttachmentParameteriv
+  1841 ms  dlsym: glGetFramebufferAttachmentParameteriv
+  1841 ms    -> 0x76a4285a5b40 in libGLESv2.so
+  1841 ms  dlsym: glGetFramebufferParameteriv
+  1841 ms  dlsym: glGetFramebufferParameteriv
+  1841 ms    -> 0x76a4285a7260 in libGLESv2.so
+  1841 ms  dlsym: glGetGraphicsResetStatus
+  1841 ms  dlsym: glGetGraphicsResetStatus
+  1842 ms    -> 0x76a4285a7d80 in libGLESv2.so
+  1842 ms  dlsym: glGetInteger64i_v
+  1842 ms  dlsym: glGetInteger64i_v
+  1842 ms    -> 0x76a4285a6e60 in libGLESv2.so
+  1842 ms  dlsym: glGetInteger64v
+  1842 ms  dlsym: glGetInteger64v
+  1842 ms    -> 0x76a4285abd90 in libGLESv2.so
+  1842 ms  dlsym: glGetIntegeri_v
+  1842 ms  dlsym: glGetIntegeri_v
+  1842 ms    -> 0x76a4285a6900 in libGLESv2.so
+  1842 ms  dlsym: glGetInternalformativ
+  1842 ms  dlsym: glGetInternalformativ
+  1842 ms    -> 0x76a4285a71a0 in libGLESv2.so
+  1842 ms  dlsym: glGetMultisamplefv
+  1842 ms  dlsym: glGetMultisamplefv
+  1842 ms    -> 0x76a4285a7920 in libGLESv2.so
+  1842 ms  dlsym: glGetObjectLabel
+  1842 ms  dlsym: glGetObjectLabel
+  1842 ms    -> 0x76a4285a7b60 in libGLESv2.so
+  1842 ms  dlsym: glGetObjectPtrLabel
+  1842 ms  dlsym: glGetObjectPtrLabel
+  1842 ms    -> 0x76a4285a7ba0 in libGLESv2.so
+  1842 ms  dlsym: glGetPointerv
+  1842 ms  dlsym: glGetPointerv
+  1842 ms    -> 0x76a4285a7bc0 in libGLESv2.so
+  1842 ms  dlsym: glGetProgramBinary
+  1842 ms  dlsym: glGetProgramBinary
+  1842 ms    -> 0x76a4285a70c0 in libGLESv2.so
+  1842 ms  dlsym: glGetProgramInterfaceiv
+  1842 ms  dlsym: glGetProgramInterfaceiv
+  1842 ms    -> 0x76a4285a7280 in libGLESv2.so
+  1842 ms  dlsym: glGetProgramPipelineInfoLog
+  1842 ms  dlsym: glGetProgramPipelineInfoLog
+  1843 ms    -> 0x76a4285a7860 in libGLESv2.so
+  1843 ms  dlsym: glGetProgramPipelineiv
+  1843 ms  dlsym: glGetProgramPipelineiv
+  1843 ms    -> 0x76a4285a7400 in libGLESv2.so
+  1843 ms  dlsym: glGetProgramResourceIndex
+  1843 ms  dlsym: glGetProgramResourceIndex
+  1843 ms    -> 0x76a4285a72a0 in libGLESv2.so
+  1843 ms  dlsym: glGetProgramResourceiv
+  1843 ms  dlsym: glGetProgramResourceiv
+  1843 ms    -> 0x76a4285a72e0 in libGLESv2.so
+  1843 ms  dlsym: glGetProgramResourceLocation
+  1843 ms  dlsym: glGetProgramResourceLocation
+  1843 ms    -> 0x76a4285a7300 in libGLESv2.so
+  1843 ms  dlsym: glGetProgramResourceName
+  1843 ms  dlsym: glGetProgramResourceName
+  1843 ms    -> 0x76a4285a72c0 in libGLESv2.so
+  1843 ms  dlsym: glGetQueryiv
+  1843 ms  dlsym: glGetQueryiv
+  1843 ms    -> 0x76a4285a6680 in libGLESv2.so
+  1843 ms  dlsym: glGetQueryObjecti64vEXT
+  1843 ms  dlsym: glGetQueryObjecti64vEXT
+  1843 ms    -> 0x76a4285a8fe0 in libGLESv2.so
+  1843 ms  dlsym: glGetQueryObjectivEXT
+  1843 ms  dlsym: glGetQueryObjectivEXT
+  1843 ms    -> 0x76a4285a8fa0 in libGLESv2.so
+  1843 ms  dlsym: glGetQueryObjectui64vEXT
+  1843 ms  dlsym: glGetQueryObjectui64vEXT
+  1843 ms    -> 0x76a4285a9000 in libGLESv2.so
+  1843 ms  dlsym: glGetQueryObjectuiv
+  1843 ms  dlsym: glGetQueryObjectuiv
+  1843 ms    -> 0x76a4285a66a0 in libGLESv2.so
+  1843 ms  dlsym: glGetRenderbufferParameteriv
+  1844 ms  dlsym: glGetRenderbufferParameteriv
+  1844 ms    -> 0x76a4285a5ba0 in libGLESv2.so
+  1844 ms  dlsym: glGetSamplerParameterfv
+  1844 ms  dlsym: glGetSamplerParameterfv
+  1844 ms    -> 0x76a4285a6fc0 in libGLESv2.so
+  1844 ms  dlsym: glGetSamplerParameteriv
+  1844 ms  dlsym: glGetSamplerParameteriv
+  1844 ms    -> 0x76a4285a6fa0 in libGLESv2.so
+  1844 ms  dlsym: glGetShaderPrecisionFormat
+  1844 ms  dlsym: glGetShaderPrecisionFormat
+  1844 ms    -> 0x76a4285a5c00 in libGLESv2.so
+  1844 ms  dlsym: glGetSynciv
+  1844 ms  dlsym: glGetSynciv
+  1844 ms    -> 0x76a4285a6e40 in libGLESv2.so
+  1844 ms  dlsym: glGetTexLevelParameterfv
+  1844 ms  dlsym: glGetTexLevelParameterfv
+  1844 ms    -> 0x76a4285a7980 in libGLESv2.so
+  1844 ms  dlsym: glGetTexLevelParameteriv
+  1844 ms  dlsym: glGetTexLevelParameteriv
+  1844 ms    -> 0x76a4285a7960 in libGLESv2.so
+  1844 ms  dlsym: glGetTransformFeedbackVarying
+  1844 ms  dlsym: glGetTransformFeedbackVarying
+  1844 ms    -> 0x76a4285a69c0 in libGLESv2.so
+  1844 ms  dlsym: glGetUniformBlockIndex
+  1844 ms  dlsym: glGetUniformBlockIndex
+  1844 ms    -> 0x76a4285a6ce0 in libGLESv2.so
+  1844 ms  dlsym: glGetUniformIndices
+  1844 ms  dlsym: glGetUniformIndices
+  1844 ms    -> 0x76a4285a6ca0 in libGLESv2.so
+  1844 ms  dlsym: glGetUniformuiv
+  1844 ms  dlsym: glGetUniformuiv
+  1844 ms    -> 0x76a4285a6ac0 in libGLESv2.so
+  1845 ms  dlsym: glInsertEventMarkerEXT
+  1845 ms  dlsym: glInsertEventMarkerEXT
+  1845 ms    -> 0x76a4285a8e40 in libGLESv2.so
+  1845 ms  dlsym: glInvalidateFramebuffer
+  1845 ms  dlsym: glInvalidateFramebuffer
+  1845 ms    -> 0x76a4285a7120 in libGLESv2.so
+  1845 ms  dlsym: glInvalidateSubFramebuffer
+  1845 ms  dlsym: glInvalidateSubFramebuffer
+  1845 ms    -> 0x76a4285a7140 in libGLESv2.so
+  1845 ms  dlsym: glIsEnabledi
+  1845 ms  dlsym: glIsEnabledi
+  1845 ms    -> 0x76a4285a7cc0 in libGLESv2.so
+  1845 ms  dlsym: glIsFramebuffer
+  1845 ms  dlsym: glIsFramebuffer
+  1845 ms    -> 0x76a4285a5da0 in libGLESv2.so
+  1845 ms  dlsym: glIsProgramPipeline
+  1845 ms  dlsym: glIsProgramPipeline
+  1845 ms    -> 0x76a4285a73e0 in libGLESv2.so
+  1845 ms  dlsym: glIsQuery
+  1845 ms  dlsym: glIsQuery
+  1845 ms    -> 0x76a4285a6620 in libGLESv2.so
+  1845 ms  dlsym: glIsRenderbuffer
+  1845 ms  dlsym: glIsRenderbuffer
+  1845 ms    -> 0x76a4285a5de0 in libGLESv2.so
+  1845 ms  dlsym: glIsSampler
+  1845 ms  dlsym: glIsSampler
+  1845 ms    -> 0x76a4285a6ee0 in libGLESv2.so
+  1845 ms  dlsym: glIsSync
+  1845 ms  dlsym: glIsSync
+  1845 ms    -> 0x76a4285a6dc0 in libGLESv2.so
+  1845 ms  dlsym: glIsTransformFeedback
+  1845 ms  dlsym: glIsTransformFeedback
+  1846 ms    -> 0x76a4285a7060 in libGLESv2.so
+  1846 ms  dlsym: glIsVertexArray
+  1846 ms  dlsym: glIsVertexArray
+  1846 ms    -> 0x76a4285a68e0 in libGLESv2.so
+  1846 ms  dlsym: glMapBufferRange
+  1846 ms  dlsym: glMapBufferRange
+  1846 ms    -> 0x76a4285a6840 in libGLESv2.so
+  1846 ms  dlsym: glMemoryBarrierByRegion
+  1846 ms  dlsym: glMemoryBarrierByRegion
+  1846 ms    -> 0x76a4285a78e0 in libGLESv2.so
+  1846 ms  dlsym: glMemoryBarrier
+  1846 ms  dlsym: glMemoryBarrier
+  1846 ms    -> 0x76a4285a78c0 in libGLESv2.so
+  1846 ms  dlsym: glMinSampleShading
+  1846 ms  dlsym: glMinSampleShading
+  1846 ms    -> 0x76a4285a7e20 in libGLESv2.so
+  1846 ms  dlsym: glObjectLabel
+  1846 ms  dlsym: glObjectLabel
+  1846 ms    -> 0x76a4285a7b40 in libGLESv2.so
+  1846 ms  dlsym: glObjectPtrLabel
+  1846 ms  dlsym: glObjectPtrLabel
+  1846 ms    -> 0x76a4285a7b80 in libGLESv2.so
+  1847 ms  dlsym: glPatchParameteri
+  1847 ms  dlsym: glPatchParameteri
+  1847 ms    -> 0x76a4285a7e40 in libGLESv2.so
+  1847 ms  dlsym: glPauseTransformFeedback
+  1847 ms  dlsym: glPauseTransformFeedback
+  1847 ms    -> 0x76a4285a7080 in libGLESv2.so
+  1847 ms  dlsym: glPopDebugGroup
+  1847 ms  dlsym: glPopDebugGroup
+  1847 ms    -> 0x76a4285a7b20 in libGLESv2.so
+  1847 ms  dlsym: glPopGroupMarkerEXT
+  1847 ms  dlsym: glPopGroupMarkerEXT
+  1847 ms    -> 0x76a4285a8e80 in libGLESv2.so
+  1847 ms  dlsym: glProgramBinary
+  1847 ms  dlsym: glProgramBinary
+  1847 ms    -> 0x76a4285a70e0 in libGLESv2.so
+  1847 ms  dlsym: glProgramParameteri
+  1847 ms  dlsym: glProgramParameteri
+  1847 ms    -> 0x76a4285a7100 in libGLESv2.so
+  1847 ms  dlsym: glProgramUniform1f
+  1847 ms  dlsym: glProgramUniform1f
+  1847 ms    -> 0x76a4285a7520 in libGLESv2.so
+  1847 ms  dlsym: glProgramUniform1fv
+  1847 ms  dlsym: glProgramUniform1fv
+  1847 ms    -> 0x76a4285a76a0 in libGLESv2.so
+  1847 ms  dlsym: glProgramUniform1i
+  1847 ms  dlsym: glProgramUniform1i
+  1848 ms    -> 0x76a4285a7420 in libGLESv2.so
+  1848 ms  dlsym: glProgramUniform1iv
+  1848 ms  dlsym: glProgramUniform1iv
+  1848 ms    -> 0x76a4285a75a0 in libGLESv2.so
+  1848 ms  dlsym: glProgramUniform1ui
+  1848 ms  dlsym: glProgramUniform1ui
+  1848 ms    -> 0x76a4285a74a0 in libGLESv2.so
+  1848 ms  dlsym: glProgramUniform1uiv
+  1848 ms  dlsym: glProgramUniform1uiv
+  1848 ms    -> 0x76a4285a7620 in libGLESv2.so
+  1848 ms  dlsym: glProgramUniform2f
+  1848 ms  dlsym: glProgramUniform2f
+  1848 ms    -> 0x76a4285a7540 in libGLESv2.so
+  1848 ms  dlsym: glProgramUniform2fv
+  1848 ms  dlsym: glProgramUniform2fv
+  1848 ms    -> 0x76a4285a76c0 in libGLESv2.so
+  1848 ms  dlsym: glProgramUniform2i
+  1848 ms  dlsym: glProgramUniform2i
+  1848 ms    -> 0x76a4285a7440 in libGLESv2.so
+  1848 ms  dlsym: glProgramUniform2iv
+  1848 ms  dlsym: glProgramUniform2iv
+  1848 ms    -> 0x76a4285a75c0 in libGLESv2.so
+  1848 ms  dlsym: glProgramUniform2ui
+  1848 ms  dlsym: glProgramUniform2ui
+  1848 ms    -> 0x76a4285a74c0 in libGLESv2.so
+  1848 ms  dlsym: glProgramUniform2uiv
+  1848 ms  dlsym: glProgramUniform2uiv
+  1848 ms    -> 0x76a4285a7640 in libGLESv2.so
+  1848 ms  dlsym: glProgramUniform3f
+  1848 ms  dlsym: glProgramUniform3f
+  1848 ms    -> 0x76a4285a7560 in libGLESv2.so
+  1848 ms  dlsym: glProgramUniform3fv
+  1848 ms  dlsym: glProgramUniform3fv
+  1849 ms    -> 0x76a4285a76e0 in libGLESv2.so
+  1849 ms  dlsym: glProgramUniform3i
+  1849 ms  dlsym: glProgramUniform3i
+  1849 ms    -> 0x76a4285a7460 in libGLESv2.so
+  1849 ms  dlsym: glProgramUniform3iv
+  1849 ms  dlsym: glProgramUniform3iv
+  1849 ms    -> 0x76a4285a75e0 in libGLESv2.so
+  1849 ms  dlsym: glProgramUniform3ui
+  1849 ms  dlsym: glProgramUniform3ui
+  1849 ms    -> 0x76a4285a74e0 in libGLESv2.so
+  1849 ms  dlsym: glProgramUniform3uiv
+  1849 ms  dlsym: glProgramUniform3uiv
+  1849 ms    -> 0x76a4285a7660 in libGLESv2.so
+  1849 ms  dlsym: glProgramUniform4f
+  1849 ms  dlsym: glProgramUniform4f
+  1849 ms    -> 0x76a4285a7580 in libGLESv2.so
+  1849 ms  dlsym: glProgramUniform4fv
+  1849 ms  dlsym: glProgramUniform4fv
+  1849 ms    -> 0x76a4285a7700 in libGLESv2.so
+  1849 ms  dlsym: glProgramUniform4i
+  1849 ms  dlsym: glProgramUniform4i
+  1849 ms    -> 0x76a4285a7480 in libGLESv2.so
+  1849 ms  dlsym: glProgramUniform4iv
+  1849 ms  dlsym: glProgramUniform4iv
+  1849 ms    -> 0x76a4285a7600 in libGLESv2.so
+  1849 ms  dlsym: glProgramUniform4ui
+  1850 ms  dlsym: glProgramUniform4ui
+  1850 ms    -> 0x76a4285a7500 in libGLESv2.so
+  1850 ms  dlsym: glProgramUniform4uiv
+  1850 ms  dlsym: glProgramUniform4uiv
+  1850 ms    -> 0x76a4285a7680 in libGLESv2.so
+  1850 ms  dlsym: glProgramUniformMatrix2fv
+  1850 ms  dlsym: glProgramUniformMatrix2fv
+  1850 ms    -> 0x76a4285a7720 in libGLESv2.so
+  1850 ms  dlsym: glProgramUniformMatrix2x3fv
+  1850 ms  dlsym: glProgramUniformMatrix2x3fv
+  1850 ms    -> 0x76a4285a7780 in libGLESv2.so
+  1850 ms  dlsym: glProgramUniformMatrix2x4fv
+  1850 ms  dlsym: glProgramUniformMatrix2x4fv
+  1850 ms    -> 0x76a4285a77c0 in libGLESv2.so
+  1850 ms  dlsym: glProgramUniformMatrix3fv
+  1850 ms  dlsym: glProgramUniformMatrix3fv
+  1850 ms    -> 0x76a4285a7740 in libGLESv2.so
+  1850 ms  dlsym: glProgramUniformMatrix3x2fv
+  1850 ms  dlsym: glProgramUniformMatrix3x2fv
+  1850 ms    -> 0x76a4285a77a0 in libGLESv2.so
+  1850 ms  dlsym: glProgramUniformMatrix3x4fv
+  1850 ms  dlsym: glProgramUniformMatrix3x4fv
+  1850 ms    -> 0x76a4285a7800 in libGLESv2.so
+  1850 ms  dlsym: glProgramUniformMatrix4fv
+  1850 ms  dlsym: glProgramUniformMatrix4fv
+  1850 ms    -> 0x76a4285a7760 in libGLESv2.so
+  1850 ms  dlsym: glProgramUniformMatrix4x2fv
+  1850 ms  dlsym: glProgramUniformMatrix4x2fv
+  1850 ms    -> 0x76a4285a77e0 in libGLESv2.so
+  1850 ms  dlsym: glProgramUniformMatrix4x3fv
+  1851 ms  dlsym: glProgramUniformMatrix4x3fv
+  1851 ms    -> 0x76a4285a7820 in libGLESv2.so
+  1851 ms  dlsym: glPushDebugGroup
+  1851 ms  dlsym: glPushDebugGroup
+  1851 ms    -> 0x76a4285a7b00 in libGLESv2.so
+  1851 ms  dlsym: glPushGroupMarkerEXT
+  1851 ms  dlsym: glPushGroupMarkerEXT
+  1851 ms    -> 0x76a4285a8e60 in libGLESv2.so
+  1851 ms  dlsym: glQueryCounterEXT
+  1851 ms  dlsym: glQueryCounterEXT
+  1851 ms    -> 0x76a4285a8f60 in libGLESv2.so
+  1851 ms  dlsym: glReadBuffer
+  1851 ms  dlsym: glReadBuffer
+  1851 ms    -> 0x76a4285a6500 in libGLESv2.so
+  1851 ms  dlsym: glReleaseShaderCompiler
+  1851 ms  dlsym: glReleaseShaderCompiler
+  1851 ms    -> 0x76a4285a5ee0 in libGLESv2.so
+  1851 ms  dlsym: glRenderbufferStorage
+  1851 ms  dlsym: glRenderbufferStorage
+  1851 ms    -> 0x76a4285a5f00 in libGLESv2.so
+  1851 ms  dlsym: glRenderbufferStorageMultisample
+  1851 ms  dlsym: glRenderbufferStorageMultisample
+  1851 ms    -> 0x76a4285a6800 in libGLESv2.so
+  1851 ms  dlsym: glRenderbufferStorageMultisampleEXT
+  1851 ms  dlsym: glRenderbufferStorageMultisampleEXT
+  1851 ms    -> 0x76a4285a95a0 in libGLESv2.so
+  1851 ms  dlsym: glResumeTransformFeedback
+  1851 ms  dlsym: glResumeTransformFeedback
+  1851 ms    -> 0x76a4285a70a0 in libGLESv2.so
+  1851 ms  dlsym: glSampleMaski
+  1852 ms  dlsym: glSampleMaski
+  1852 ms    -> 0x76a4285a7940 in libGLESv2.so
+  1852 ms  dlsym: glSamplerParameterf
+  1852 ms  dlsym: glSamplerParameterf
+  1852 ms    -> 0x76a4285a6f60 in libGLESv2.so
+  1852 ms  dlsym: glSamplerParameterfv
+  1852 ms  dlsym: glSamplerParameterfv
+  1852 ms    -> 0x76a4285a6f80 in libGLESv2.so
+  1852 ms  dlsym: glSamplerParameteri
+  1852 ms  dlsym: glSamplerParameteri
+  1852 ms    -> 0x76a4285a6f20 in libGLESv2.so
+  1852 ms  dlsym: glSamplerParameteriv
+  1852 ms  dlsym: glSamplerParameteriv
+  1852 ms    -> 0x76a4285a6f40 in libGLESv2.so
+  1852 ms  dlsym: glShaderBinary
+  1852 ms  dlsym: glShaderBinary
+  1852 ms    -> 0x76a4285a5f60 in libGLESv2.so
+  1852 ms  dlsym: glTexBuffer
+  1852 ms  dlsym: glTexBuffer
+  1852 ms    -> 0x76a4285a7f60 in libGLESv2.so
+  1852 ms  dlsym: glTexBufferRange
+  1852 ms  dlsym: glTexBufferRange
+  1852 ms    -> 0x76a4285a7f80 in libGLESv2.so
+  1852 ms  dlsym: glTexImage3D
+  1852 ms  dlsym: glTexImage3D
+  1852 ms    -> 0x76a4285a6540 in libGLESv2.so
+  1852 ms  dlsym: glTexStorage2D
+  1852 ms  dlsym: glTexStorage2D
+  1852 ms    -> 0x76a4285a7160 in libGLESv2.so
+  1852 ms  dlsym: glTexStorage2DMultisample
+  1852 ms  dlsym: glTexStorage2DMultisample
+  1852 ms    -> 0x76a4285a7900 in libGLESv2.so
+  1852 ms  dlsym: glTexStorage3D
+  1852 ms  dlsym: glTexStorage3D
+  1852 ms    -> 0x76a4285a7180 in libGLESv2.so
+  1853 ms  dlsym: glTexSubImage3D
+  1853 ms  dlsym: glTexSubImage3D
+  1853 ms    -> 0x76a4285a6560 in libGLESv2.so
+  1853 ms  dlsym: glTransformFeedbackVaryings
+  1853 ms  dlsym: glTransformFeedbackVaryings
+  1853 ms    -> 0x76a4285a69a0 in libGLESv2.so
+  1853 ms  dlsym: glUniform1ui
+  1853 ms  dlsym: glUniform1ui
+  1853 ms    -> 0x76a4285a6b00 in libGLESv2.so
+  1853 ms  dlsym: glUniform1uiv
+  1853 ms  dlsym: glUniform1uiv
+  1853 ms    -> 0x76a4285a6b80 in libGLESv2.so
+  1853 ms  dlsym: glUniform2ui
+  1853 ms  dlsym: glUniform2ui
+  1853 ms    -> 0x76a4285a6b20 in libGLESv2.so
+  1853 ms  dlsym: glUniform2uiv
+  1853 ms  dlsym: glUniform2uiv
+  1853 ms    -> 0x76a4285a6ba0 in libGLESv2.so
+  1853 ms  dlsym: glUniform3ui
+  1853 ms  dlsym: glUniform3ui
+  1853 ms    -> 0x76a4285a6b40 in libGLESv2.so
+  1853 ms  dlsym: glUniform3uiv
+  1853 ms  dlsym: glUniform3uiv
+  1853 ms    -> 0x76a4285a6bc0 in libGLESv2.so
+  1853 ms  dlsym: glUniform4ui
+  1853 ms  dlsym: glUniform4ui
+  1853 ms    -> 0x76a4285a6b60 in libGLESv2.so
+  1853 ms  dlsym: glUniform4uiv
+  1853 ms  dlsym: glUniform4uiv
+  1853 ms    -> 0x76a4285a6be0 in libGLESv2.so
+  1853 ms  dlsym: glUniformBlockBinding
+  1853 ms  dlsym: glUniformBlockBinding
+  1853 ms    -> 0x76a4285a6d40 in libGLESv2.so
+  1853 ms  dlsym: glUniformMatrix2x3fv
+  1854 ms  dlsym: glUniformMatrix2x3fv
+  1854 ms    -> 0x76a4285a6720 in libGLESv2.so
+  1854 ms  dlsym: glUniformMatrix2x4fv
+  1854 ms  dlsym: glUniformMatrix2x4fv
+  1854 ms    -> 0x76a4285a6760 in libGLESv2.so
+  1854 ms  dlsym: glUniformMatrix3x2fv
+  1854 ms  dlsym: glUniformMatrix3x2fv
+  1854 ms    -> 0x76a4285a6740 in libGLESv2.so
+  1854 ms  dlsym: glUniformMatrix3x4fv
+  1854 ms  dlsym: glUniformMatrix3x4fv
+  1854 ms    -> 0x76a4285a67a0 in libGLESv2.so
+  1854 ms  dlsym: glUniformMatrix4x2fv
+  1854 ms  dlsym: glUniformMatrix4x2fv
+  1854 ms    -> 0x76a4285a6780 in libGLESv2.so
+  1854 ms  dlsym: glUniformMatrix4x3fv
+  1854 ms  dlsym: glUniformMatrix4x3fv
+  1854 ms    -> 0x76a4285a67c0 in libGLESv2.so
+  1854 ms  dlsym: glUnmapBuffer
+  1854 ms  dlsym: glUnmapBuffer
+  1854 ms    -> 0x76a4285a66c0 in libGLESv2.so
+  1854 ms  dlsym: glUseProgramStages
+  1854 ms  dlsym: glUseProgramStages
+  1854 ms    -> 0x76a4285a7320 in libGLESv2.so
+  1854 ms  dlsym: glValidateProgramPipeline
+  1855 ms  dlsym: glValidateProgramPipeline
+  1855 ms    -> 0x76a4285a7840 in libGLESv2.so
+  1855 ms  dlsym: glVertexAttribBinding
+  1855 ms  dlsym: glVertexAttribBinding
+  1855 ms    -> 0x76a4285a7a00 in libGLESv2.so
+  1855 ms  dlsym: glVertexAttribDivisor
+  1855 ms  dlsym: glVertexAttribDivisor
+  1855 ms    -> 0x76a4285a6fe0 in libGLESv2.so
+  1855 ms  dlsym: glVertexAttribFormat
+  1855 ms  dlsym: glVertexAttribFormat
+  1855 ms    -> 0x76a4285a79c0 in libGLESv2.so
+  1855 ms  dlsym: glVertexAttribI4i
+  1855 ms  dlsym: glVertexAttribI4i
+  1855 ms    -> 0x76a4285a6a40 in libGLESv2.so
+  1855 ms  dlsym: glVertexAttribI4iv
+  1855 ms  dlsym: glVertexAttribI4iv
+  1855 ms    -> 0x76a4285a6a80 in libGLESv2.so
+  1855 ms  dlsym: glVertexAttribI4ui
+  1855 ms  dlsym: glVertexAttribI4ui
+  1855 ms    -> 0x76a4285a6a60 in libGLESv2.so
+  1855 ms  dlsym: glVertexAttribI4uiv
+  1855 ms  dlsym: glVertexAttribI4uiv
+  1855 ms    -> 0x76a4285a6aa0 in libGLESv2.so
+  1855 ms  dlsym: glVertexAttribIFormat
+  1855 ms  dlsym: glVertexAttribIFormat
+  1855 ms    -> 0x76a4285a79e0 in libGLESv2.so
+  1855 ms  dlsym: glVertexAttribIPointer
+  1855 ms  dlsym: glVertexAttribIPointer
+  1855 ms    -> 0x76a4285a69e0 in libGLESv2.so
+  1856 ms  dlsym: glVertexBindingDivisor
+  1856 ms  dlsym: glVertexBindingDivisor
+  1856 ms    -> 0x76a4285a7a20 in libGLESv2.so
+  1856 ms  dlsym: glWaitSync
+  1856 ms  dlsym: glWaitSync
+  1856 ms    -> 0x76a4285a6e20 in libGLESv2.so
